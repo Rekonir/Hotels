@@ -3,5 +3,48 @@ $stylePur: #bc9cff;
 $StyleGr: #6fcf97;
 
 body {
-    background-color: $styleDark;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+}
+header {
+    display: flex;
+    border: 1px solid #1f2041;
+    box-shadow: 0 0 1px;
+    .text-navig {
+        display: flex;
+        justify-content: center;
+        color: rgba($styleDark, 0.5);
+        > p {
+            padding: 26px 20px;
+        }
+    }
+    .bottom {
+        display: flex;
+        margin: 18px;
+        justify-content: flex-end;
+        p {
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 15px;
+            text-transform: uppercase;
+            margin: auto;
+        }
+        .bottom-in {
+            display: flex;
+            color: $stylePur;
+            border: 2px solid $stylePur;
+            border-radius: 22px;
+            margin: 20px;
+        }
+        .bottom-log {            
+            display: flex;
+            background-color: $stylePur;
+            border: 2px solid $stylePur;
+            border-radius: 22px;
+            margin: 20px 140px 20px 0px;
+            color: white;
+        }
+    }
 }
