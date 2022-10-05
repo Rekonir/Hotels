@@ -5,21 +5,23 @@ body {
 
 header {
   display: flex;
+  align-content: space-between;
   border: 1px solid #1f2041;
   box-shadow: 0 0 1px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 header .text-navig {
   display: flex;
-  justify-content: center;
   color: rgba(31, 32, 65, 0.5);
 }
 header .text-navig > p {
-  padding: 26px 20px;
+  padding: 20px;
 }
 header .bottom {
   display: flex;
   margin: 18px;
-  justify-content: flex-end;
 }
 header .bottom p {
   padding: 10px 20px;
@@ -33,17 +35,28 @@ header .bottom p {
 header .bottom .bottom-in {
   display: flex;
   color: #bc9cff;
-  border: 2px solid #bc9cff;
+  border: 2px solid;
+  border-color: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
   margin: 20px;
 }
 header .bottom .bottom-log {
   display: flex;
-  background-color: #bc9cff;
-  border: 2px solid #bc9cff;
+  background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
   margin: 20px 140px 20px 0px;
   color: white;
+}
+header .TOXIC {
+  font-size: 20px;
+  margin: auto 13px auto 0px;
+}
+
+.logo {
+  display: flex;
+  margin: auto 13px auto 0px;
+  width: 40px;
+  height: 40px;
 }
 
 /*# sourceMappingURL=1stStyle.css.map */
