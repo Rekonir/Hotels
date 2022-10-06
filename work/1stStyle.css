@@ -5,32 +5,48 @@ body {
 
 header {
   display: flex;
-  align-content: space-between;
+  justify-content: space-between;
   border: 1px solid #1f2041;
   box-shadow: 0 0 1px;
   width: 100%;
   padding: 0px;
-  margin: 0px;
+  position: fixed;
+  background-color: white;
 }
-header .text-navig {
+header .navig {
   display: flex;
-  color: rgba(31, 32, 65, 0.5);
+  justify-content: center;
+  flex-basis: 50%;
 }
-header .text-navig > p {
-  padding: 20px;
+header .navig .text-navig {
+  color: rgba(31, 32, 65, 0.5);
+  text-decoration: none;
+  display: flex;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  align-items: center;
+  padding: 0px 20px;
 }
 header .bottom {
   display: flex;
   margin: 18px;
+  justify-content: flex-start;
+  flex-basis: 20%;
 }
-header .bottom p {
-  padding: 10px 20px;
-  text-align: center;
+header .bottom .bottom-text {
+  margin: auto;
+  padding: 9px 20px;
+  font-family: Montserrat;
   font-size: 12px;
   font-weight: 700;
   line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
   text-transform: uppercase;
-  margin: auto;
 }
 header .bottom .bottom-in {
   display: flex;
@@ -38,25 +54,38 @@ header .bottom .bottom-in {
   border: 2px solid;
   border-color: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
-  margin: 20px;
+  margin: 0px 10px;
 }
 header .bottom .bottom-log {
   display: flex;
   background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
-  margin: 20px 140px 20px 0px;
   color: white;
+  margin: 0px 10px;
 }
-header .TOXIC {
+header .TOXIN {
+  display: flex;
+  align-self: center;
+  justify-content: flex-start;
+}
+header .TOXIN .TOXIC {
   font-size: 20px;
-  margin: auto 13px auto 0px;
 }
 
 .logo {
   display: flex;
-  margin: auto 13px auto 0px;
+  flex-basis: 15%;
+  align-self: center;
+  justify-content: flex-end;
+}
+.logo .logopic {
   width: 40px;
   height: 40px;
 }
 
-/*# sourceMappingURL=1stStyle.css.map */
+.space-to-body {
+  width: 100%;
+  height: 73px;
+}
+
+/*# sourceMappingURL=1ststyle.css.map */
