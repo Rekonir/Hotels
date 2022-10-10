@@ -9,9 +9,9 @@ html(lang="ru")
   body
     header
       .logo
-          img.logopic(src="/file/logo.png", alt="Лого не загрузилось")
-          .TOXIN
-            p.TOXIC TOXIC
+        img.logopic(src="/file/logo.png", alt="Лого не загрузилось")
+        .TOXIN
+          p.TOXIC TOXIC
       .navig
         a.text-navig(href="#")
           p О нас
@@ -66,4 +66,16 @@ html(lang="ru")
           li
             h2 Подписка
           li Получайте специальные <br> предложения и новости сервиса
-          li !!!Емаил!!!
+          li
+              input.Email(type="email", placeholder="Email", title="Пожалуйста, введите вашу электронную почту для оформления заявки.")
+              .arrow 
+    .end-footer
+      .copyright
+        p Copyright ©2018 Toxin отель. Все права защищены.
+      .Social
+        .s-logo
+          img(src="/file/twitter.png", alt="Лого не загрузилось")
+        .s-logo
+          img(src="/file/facebook.png", alt="Лого не загрузилось")
+        .s-logo
+          img(src="/file/instagram.png", alt="Лого не загрузилось")

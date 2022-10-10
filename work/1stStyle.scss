@@ -4,14 +4,17 @@ $styleGr: #6fcf97;
 $grad: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
 
 header {
+    box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #1f2041;
-    box-shadow: 0 0 1px;
+    border: 1px solid red;
+    box-shadow: 0px 10px 20px rgba($styleDark,0.05);
     width: 100%;
-    padding: 0px;
+    padding: 0px 140px;
     position: fixed;
+    top: 0px;
+    left: 0px;
     background-color: white;
     .navig {
         display: flex;
@@ -66,7 +69,6 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        flex-basis: 15%;
         .logopic {
             width: 40px;
             height: 40px;
@@ -79,17 +81,22 @@ header {
 }
 
 body {
+    box-sizing: border-box;
     margin: 0px;
 }
 footer {
+    box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    border: 1px solid #1f2041;
+    border: 1px solid red;
     box-shadow: 0 0 1px;
     .up-footer {
+        box-sizing: border-box;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+        box-shadow: 0px 1px 0px rgba($styleDark,0.1);
         .col-1 {
+            box-sizing: border-box;
             display: flex;
             width: 20%;
             flex-basis: content;
@@ -101,21 +108,28 @@ footer {
             letter-spacing: 0em;
             text-align: left;
             color: rgba($styleDark, 0.5);
-            margin: 40px;
+            margin: 40px 40px 40px 140px;
+            align-items: flex-start;
             .logo {
+                box-sizing: border-box;
+                padding: 10px;
                 display: flex;
                 flex-direction: row;
+                align-items: center;
                 .logopic {
+                    box-sizing: border-box;
                     width: 40px;
                     height: 40px;
                 }
                 .TOXIC {
+                    box-sizing: border-box;
                     margin: 10px;
                     font-size: 20px;
                 }
             }
         }
         .col {
+            box-sizing: border-box;
             display: flex;
             width: 20%;
             flex-basis: content;
@@ -141,6 +155,84 @@ footer {
                 li {
                     padding: 10px 0px;
                 }
+
+                .Email {
+                    border: 1px solid rbga($styleGr, 0.25);
+                    width: 260px;
+                    height: 44px;
+                    font-family: "Montserrat", sans-serif;
+                    box-sizing: border-box;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    text-decoration: rbga($styleDark, 0.25);
+                }
+
+                .arrow {
+                    box-sizing: border-box;
+                    position: relative;
+                    top: -22px;
+                    width: 18px;
+                    height: 2.5px;
+                    background: $grad;
+                    left: 228px;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 14px;
+                        height: 2px;
+                        top: -4.5px;
+                        right: -3px;
+                        background: $grad;
+                        transform: rotate(45deg);
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 14px;
+                        height: 2px;
+                        top: 4.5px;
+                        right: -3px;
+                        background: $grad;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+    .end-footer {
+        box-sizing: border-box;
+        display: flex;        
+        justify-content: space-between;
+        width: 100%;
+        height: 70px;
+        box-shadow: 0px 10px 20px rgba($styleDark,0.05);
+        border-top:1px solid rgba($styleDark,0.25);
+        padding: 0px 140px;
+        .copyright {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: rgba($styleDark,0.75);
+        }
+        .Social {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            .s-logo {
+                box-sizing: border-box;
+                padding: 10px;
+                img{
+                width: 24px;
+                height: 24px;}
             }
         }
     }
