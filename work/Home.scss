@@ -1,0 +1,16 @@
+$styleDark: #1f2041;
+$stylePur: #bc9cff;
+$styleGr: #6fcf97;
+$grad: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+
+body {
+    box-sizing: border-box;
+    margin: 73px 0px 0px 0px;
+    .fon {
+        img {
+            width: 100%;
+            height: 830px;
+            background-size: cover;
+        }
+    }
+}

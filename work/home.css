@@ -1,0 +1,11 @@
+body {
+  box-sizing: border-box;
+  margin: 73px 0px 0px 0px;
+}
+body .fon img {
+  width: 100%;
+  height: 830px;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=home.css.map */
