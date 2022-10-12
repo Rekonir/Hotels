@@ -4,13 +4,13 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
     title Page one 
-    link(rel="icon", href="./file/icon.png")
+    link(rel="icon", href="../file/icon.png", type="image/x-icon")
     link(rel="stylesheet", href="Home.css")
   body
     header
-        include Header.pug
+      include Header.pug
     .fon
-        img(href="./Fon.png")
-
+        p.right-text Лучшие номера для вашей работы,<br> отдыха и просто вдохновения
+        include reg-box.pug
     footer
-        include Footer.pug
+      include Footer.pug

@@ -2,13 +2,14 @@ $styleDark: #1f2041;
 $stylePur: #bc9cff;
 $styleGr: #6fcf97;
 $grad: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+$shrift: "Montserrat", sans-serif;
 
 header {
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: $shrift;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 10px 20px rgba($styleDark,0.05);
+    box-shadow: 0px 10px 20px rgba($styleDark, 0.05);
     width: 100%;
     padding: 0px 140px;
     position: fixed;
@@ -81,14 +82,14 @@ header {
 
 footer {
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: $shrift;
     box-shadow: 0 0 1px;
     .up-footer {
         box-sizing: border-box;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        box-shadow: 0px 1px 0px rgba($styleDark,0.1);
+        box-shadow: 0px 1px 0px rgba($styleDark, 0.1);
         .col-1 {
             box-sizing: border-box;
             display: flex;
@@ -151,27 +152,36 @@ footer {
                 }
 
                 .Email {
-                    border: 1px solid rbga($styleGr, 0.25);
+                    border: 1px solid rgba($styleGr, 0.25);
                     width: 260px;
                     height: 44px;
-                    font-family: "Montserrat", sans-serif;
+                    font-family: $shrift;
                     box-sizing: border-box;
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 24px;
                     letter-spacing: 0em;
                     text-align: left;
-                    text-decoration: rbga($styleDark, 0.25);
+                    text-decoration: rgba($styleDark, 0.25);
+                }
+
+                a {
+                    display: block;
+                    width: 44px;
+                    height: 44px;
+                    position: relative;
+                    top: -22px;
+                    left: -12px;
                 }
 
                 .arrow {
                     box-sizing: border-box;
                     position: relative;
                     top: -22px;
+                    left: 228px;
                     width: 18px;
                     height: 2.5px;
                     background: $grad;
-                    left: 228px;
                     &:after {
                         content: "";
                         position: absolute;
@@ -198,24 +208,24 @@ footer {
     }
     .end-footer {
         box-sizing: border-box;
-        display: flex;        
+        display: flex;
         justify-content: space-between;
         width: 100%;
         height: 70px;
-        box-shadow: 0px 10px 20px rgba($styleDark,0.05);
-        border-top:1px solid rgba($styleDark,0.25);
+        box-shadow: 0px 10px 20px rgba($styleDark, 0.05);
+        border-top: 1px solid rgba($styleDark, 0.25);
         padding: 0px 140px;
         .copyright {
             box-sizing: border-box;
             display: flex;
             align-items: center;
-            font-family: "Montserrat", sans-serif;
+            font-family: $shrift;
             font-size: 14px;
             font-weight: 400;
             line-height: 17px;
             letter-spacing: 0em;
             text-align: left;
-            color: rgba($styleDark,0.75);
+            color: rgba($styleDark, 0.75);
         }
         .Social {
             box-sizing: border-box;
@@ -224,9 +234,10 @@ footer {
             .s-logo {
                 box-sizing: border-box;
                 padding: 10px;
-                img{
-                width: 24px;
-                height: 24px;}
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
             }
         }
     }

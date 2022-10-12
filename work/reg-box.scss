@@ -1,0 +1,74 @@
+$styleDark: #1f2041;
+$stylePur: #bc9cff;
+$styleGr: #6fcf97;
+$grad: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+$shrift: "Montserrat", sans-serif;
+
+.reg {
+    box-sizing: border-box;
+    margin-top: 70px;
+    margin-left: 140px;
+    padding: 40px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    width: 380px;
+    height: 374px;
+    h1 {
+        font-family: $shrift;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    .date {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+    }
+    h2 {
+        font-family: $shrift;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        color: $styleDark;
+        text-transform: uppercase;
+    }
+    .date-reg {
+        border: 1px solid rgba($styleGr, 0.25);
+        width: 150px;
+        height: 44px;
+        
+        font-family: $shrift;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-decoration: rgba($styleDark, 0.25);
+    }
+
+    .bottom-reg {
+        display: flex;
+        background: $grad;
+        border-radius: 22px;
+        color: white;
+        margin: 0px 10px;
+        p {
+            font-family: $shrift;
+            margin: auto;
+            padding: 9px 20px;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: left;
+            text-transform: uppercase;
+        }
+    }
+}

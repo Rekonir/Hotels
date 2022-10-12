@@ -149,7 +149,7 @@ footer .up-footer .col ul li {
   padding: 10px 0px;
 }
 footer .up-footer .col ul .Email {
-  border: 1px solid rbga(#6fcf97, 0.25);
+  border: 1px solid rgba(111, 207, 151, 0.25);
   width: 260px;
   height: 44px;
   font-family: "Montserrat", sans-serif;
@@ -159,16 +159,24 @@ footer .up-footer .col ul .Email {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  text-decoration: rbga(#1f2041, 0.25);
+  text-decoration: rgba(31, 32, 65, 0.25);
+}
+footer .up-footer .col ul a {
+  display: block;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  top: -22px;
+  left: -12px;
 }
 footer .up-footer .col ul .arrow {
   box-sizing: border-box;
   position: relative;
   top: -22px;
+  left: 228px;
   width: 18px;
   height: 2.5px;
   background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
-  left: 228px;
 }
 footer .up-footer .col ul .arrow:after {
   content: "";

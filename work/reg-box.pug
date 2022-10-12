@@ -1,0 +1,21 @@
+doctype html 
+html(lang="ru")
+  head
+    link(rel="stylesheet", href="reg-box.css")
+
+    .reg
+      .col-reg
+        h1 Найдём номера под <br> ваши пожелания
+      .date
+        .prib
+          h2 Прибытие
+          input.date-reg(type="date", placeholder="ДД.ММ.ГГГГ", title="Выбирете желаемую дату прибытия")
+        .vyezd
+          h2 Выезд
+          input.date-reg(type="date", placeholder="ДД.ММ.ГГГГ", title="Выбирете желаемую дату выезда")
+      .col-reg
+        h2 Гости
+        
+      a.bottom-reg(href="#")
+        p Подобрать номер
+        .arrow-reg
