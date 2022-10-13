@@ -5,12 +5,12 @@ body {
 body .fon {
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: flex-end;
   background-image: url(../file/Fon.png);
   background-size: cover;
-  width: 100%;
+  padding: 0px 140px;
 }
 body .fon .right-text {
   display: flex;
@@ -21,6 +21,9 @@ body .fon .right-text {
   letter-spacing: 0em;
   text-align: right;
   color: rgba(31, 32, 65, 0.75);
+}
+body .fon .reg {
+  display: flex;
 }
 
 /*# sourceMappingURL=home.css.map */

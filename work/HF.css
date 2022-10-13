@@ -5,7 +5,7 @@ header {
   justify-content: space-between;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   width: 100%;
-  padding: 0px 140px;
+  padding: 0px 120px 0px 140px;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -24,9 +24,24 @@ header .navig .text-navig {
   font-weight: 400;
   line-height: 17px;
   letter-spacing: 0em;
-  text-align: left;
-  align-items: center;
+  align-items: baseline;
   padding: 0px 20px;
+  margin: auto;
+}
+header .navig .hdr-arrow {
+  box-sizing: border-box;
+  display: flex;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  margin-left: 5px;
+  transform: rotate(135deg);
+}
+header .navig .hdr-arrow a {
+  display: block;
+  width: 10px;
+  height: 10px;
 }
 header .bottom {
   display: flex;
@@ -84,6 +99,7 @@ footer .up-footer {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: space-between;
   box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 }
 footer .up-footer .col-1 {
@@ -160,6 +176,7 @@ footer .up-footer .col ul .Email {
   letter-spacing: 0em;
   text-align: left;
   text-decoration: rgba(31, 32, 65, 0.25);
+  margin-right: 100px;
 }
 footer .up-footer .col ul a {
   display: block;
@@ -234,4 +251,4 @@ footer .end-footer .Social .s-logo img {
   height: 24px;
 }
 
-/*# sourceMappingURL=HF.css.map */
+/*# sourceMappingURL=hf.css.map */

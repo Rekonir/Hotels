@@ -10,12 +10,12 @@ body {
     .fon {
         box-sizing: border-box;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+        flex-direction: row-reverse;
+        justify-content: space-between;
         align-items: flex-end;
         background-image: url(../file/Fon.png);
         background-size: cover;
-        width: 100%;
+        padding: 0px 140px;
         .right-text {
             display: flex;
             font-family: $shrift;
@@ -25,6 +25,9 @@ body {
             letter-spacing: 0em;
             text-align: right;
             color: rgba($styleDark, 0.75);
+        }
+        .reg{
+            display: flex;
         }
     }
 }

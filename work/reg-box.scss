@@ -7,7 +7,7 @@ $shrift: "Montserrat", sans-serif;
 .reg {
     box-sizing: border-box;
     margin-top: 70px;
-    margin-left: 140px;
+    margin-bottom: 383px;
     padding: 40px 30px 30px 30px;
     display: flex;
     flex-direction: column;
@@ -15,8 +15,6 @@ $shrift: "Montserrat", sans-serif;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    width: 380px;
-    height: 374px;
     h1 {
         font-family: $shrift;
         font-size: 24px;
@@ -29,6 +27,7 @@ $shrift: "Montserrat", sans-serif;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
+        .prib{margin-right: 20px;}
     }
     h2 {
         font-family: $shrift;
@@ -37,12 +36,12 @@ $shrift: "Montserrat", sans-serif;
         line-height: 15px;
         color: $styleDark;
         text-transform: uppercase;
+        margin: 21px 0px 6px 0px;
     }
     .date-reg {
         border: 1px solid rgba($styleGr, 0.25);
         width: 150px;
         height: 44px;
-        
         font-family: $shrift;
         box-sizing: border-box;
         font-size: 14px;
@@ -52,13 +51,26 @@ $shrift: "Montserrat", sans-serif;
         text-align: left;
         text-decoration: rgba($styleDark, 0.25);
     }
-
+    .gosty{
+        box-sizing: border-box;
+        font-family: $shrift;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-decoration: rgba($styleDark, 0.25);
+        width: 100%;
+        border: 1px solid rgba($styleGr, 0.25);
+    }
     .bottom-reg {
         display: flex;
         background: $grad;
         border-radius: 22px;
         color: white;
-        margin: 0px 10px;
+        margin: 30px 0px;
+        width: 100%;
         p {
             font-family: $shrift;
             margin: auto;
