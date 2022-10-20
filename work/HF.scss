@@ -20,31 +20,38 @@ header {
         display: flex;
         justify-content: center;
         flex-basis: 50%;
-        .text-navig {
-            color: rgba($styleDark, 0.5);
-            text-decoration: none;
-            display: flex;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 17px;
-            letter-spacing: 0em;
-            align-items: baseline;
-            padding: 0px 20px;
-            margin: auto;
-        }
-        .hdr-arrow {
+        .navig-col {
             box-sizing: border-box;
             display: flex;
-            width: 10px;
-            height: 10px;
-            border-top: 2px solid rgba($styleDark, 0.5);
-            border-right: 2px solid rgba($styleDark, 0.5);
-            margin-left: 5px;
-            transform: rotate(135deg);
-            a{
-                display: block;
+            margin: auto;
+            .text-navig {
+                display: flex;
+                color: rgba($styleDark, 0.5);
+                text-decoration: none;
+                box-sizing: border-box;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17px;
+                letter-spacing: 0em;
+                align-items: baseline;
+                margin: 0px 10px;
+            }
+            .hdr-arrow {
+                box-sizing: border-box;
+                display: flex;
+                align-self: center;
                 width: 10px;
                 height: 10px;
+                border-top: 2px solid rgba($styleDark, 0.5);
+                border-right: 2px solid rgba($styleDark, 0.5);
+                margin-bottom: 5px;
+                transform: rotate(135deg);
+                a {
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    margin: -5px;
+                }
             }
         }
     }

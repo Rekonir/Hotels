@@ -16,32 +16,39 @@ header .navig {
   justify-content: center;
   flex-basis: 50%;
 }
-header .navig .text-navig {
+header .navig .navig-col {
+  box-sizing: border-box;
+  display: flex;
+  margin: auto;
+}
+header .navig .navig-col .text-navig {
+  display: flex;
   color: rgba(31, 32, 65, 0.5);
   text-decoration: none;
-  display: flex;
+  box-sizing: border-box;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   letter-spacing: 0em;
   align-items: baseline;
-  padding: 0px 20px;
-  margin: auto;
+  margin: 0px 10px;
 }
-header .navig .hdr-arrow {
+header .navig .navig-col .hdr-arrow {
   box-sizing: border-box;
   display: flex;
+  align-self: center;
   width: 10px;
   height: 10px;
   border-top: 2px solid rgba(31, 32, 65, 0.5);
   border-right: 2px solid rgba(31, 32, 65, 0.5);
-  margin-left: 5px;
+  margin-bottom: 5px;
   transform: rotate(135deg);
 }
-header .navig .hdr-arrow a {
+header .navig .navig-col .hdr-arrow a {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
+  margin: -5px;
 }
 header .bottom {
   display: flex;
@@ -251,4 +258,4 @@ footer .end-footer .Social .s-logo img {
   height: 24px;
 }
 
-/*# sourceMappingURL=hf.css.map */
+/*# sourceMappingURL=HF.css.map */
