@@ -1,11 +1,9 @@
 link(rel="stylesheet", href="reg-box.css")
-script 
-  include drop.js
-  
+
 
 .reg
   .col-reg
-    h1.test Найдём номера под <br> ваши пожелания
+    h1 Найдём номера под <br> ваши пожелания
   .date
     .prib
       h2 Прибытие
@@ -15,12 +13,27 @@ script
       input.date-reg(type="date", placeholder="ДД.ММ.ГГГГ", title="Выбирете желаемую дату выезда")
   .col-reg
     h2 Гости
-    input.gosty(type="text", placeholder="Гости", title="Сколько планируется гостей?", tabindex="1")
+    input.gosty(type="text", placeholder="Гости", title="Сколько планируется гостей?")
     .drop-gosty
-      .drop-gosty-vz 
+      .drop-gosty-schet 
         h2 Взрослые от 18 лет
-      .drop-gosty-dety
+        .schet
+          img.minus#mvzr(src="/file/minus.png" alt='Нет минуса')
+          h2.itog#vzr 0
+          img.plus#pvzr(src="/file/plus.png" alt='Нет плюса')
+      .drop-gosty-schet
         h2 Дети до 17 лет
+        .schet
+          img.minus#mdety(src="/file/minus.png" alt='Нет минуса')
+          h2.itog#dety 0
+          img.plus#pdety(src="/file/plus.png" alt='Нет плюса')
+      .drop-gosty-schet
+        h2 Младенцы до 1 года
+        .schet
+          img.minus#mbaby(src="/file/minus.png" alt='Нет минуса')
+          h2.itog#baby 0
+          img.plus#pbaby(src="/file/plus.png" alt='Нет плюса')
   a.bottom-reg(href="#")
     p Подобрать номер
     .arrow-reg
+script(src="drop.js")

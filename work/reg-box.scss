@@ -98,17 +98,14 @@ input.gosty[type="text"] {
     box-sizing: border-box;
     padding: 10px;
     border-radius: 4px;
-    cursor: pointer;
-    &:focus + .drop-gosty {
-        box-sizing: border-box;
-        display: block;
-        border: 1px solid rgba($styleDark, 0.5);
-        box-shadow: 0px 10px 20px rgba($styleDark, 0.05);
-    }
 }
 .drop-gosty {
     box-sizing: border-box;
+    position: sticky;
     display: none;
+    flex-direction: column;
+    border: 1px solid rgba($styleDark, 0.5);
+    box-shadow: 0px 10px 20px rgba($styleDark, 0.05);
     font-family: $shrift;
     font-weight: 700;
     font-size: 12px;
@@ -116,4 +113,37 @@ input.gosty[type="text"] {
     color: $styleDark;
     text-transform: uppercase;
     padding: 10px;
+    margin: 5px 0px;
+    z-index: 10;
+    .drop-gosty-schet {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 7px 0px;
+        h2{
+        margin: 0px;}
+    }
+}
+.schet {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    .minus {
+        width: 30px;
+        height: 30px;
+        margin: 0px 16px;
+        padding: 0px;
+    }
+    .itog{
+        display: flex;
+        width: 12px;
+
+    }
+    .plus {
+        width: 30px;
+        height: 30px;
+        margin: 0px 16px;
+        padding: 0px;
+    }
 }
