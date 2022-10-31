@@ -56,6 +56,7 @@ $shrift: "Montserrat", sans-serif;
         border-radius: 4px;
     }
     .gosty {
+        position: relative;
         box-sizing: border-box;
         font-family: $shrift;
         font-size: 14px;
@@ -101,7 +102,9 @@ input.gosty[type="text"] {
 }
 .drop-gosty {
     box-sizing: border-box;
-    position: sticky;
+    position: absolute;
+    background: white;
+    width: 318px;
     display: none;
     flex-direction: column;
     border: 1px solid rgba($styleDark, 0.5);
@@ -114,7 +117,7 @@ input.gosty[type="text"] {
     text-transform: uppercase;
     padding: 10px;
     margin: 5px 0px;
-    z-index: 10;
+    z-index: 1;
     .drop-gosty-schet {
         box-sizing: border-box;
         display: flex;

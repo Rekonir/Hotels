@@ -1,0 +1,109 @@
+body {
+  box-sizing: border-box;
+  margin: 73px 0px 0px 0px;
+}
+
+.side {
+  background: red;
+  width: 30%;
+  height: 1385px;
+  display: flex;
+}
+
+h1 {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.nomera {
+  box-sizing: border-box;
+  width: 70%;
+  height: 1385px;
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+.nomera .moz {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+.nomera .moz .hotel {
+  box-sizing: border-box;
+  width: 270px;
+  height: 275px;
+  display: inline-block;
+  background: white;
+  padding: 0px;
+  margin: 20px 6px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+}
+.nomera .moz .hotel .pict {
+  box-sizing: border-box;
+  width: 270px;
+  height: 150px;
+  border-radius: 4px;
+}
+.nomera .moz .hotel .info {
+  box-sizing: border-box;
+  position: relative;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px;
+}
+.nomera .moz .hotel .info .pn {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0px;
+}
+.nomera .moz .hotel .info .type {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #bc9cff;
+  display: block;
+  width: 45px;
+  margin: 0px;
+}
+.nomera .moz .hotel .info .value {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  margin: 0px;
+}
+.nomera .moz .hotel .info .per {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  margin: 0px;
+}
+.nomera .moz .hotel .info::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 0px;
+  background: rgba(31, 32, 65, 0.1);
+  width: 230px;
+  height: 1px;
+  margin: 0px;
+}
+
+/*# sourceMappingURL=page.css.map */

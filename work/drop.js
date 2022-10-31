@@ -1,10 +1,3 @@
-//alert('2')
-
-// const drop = document.getElementsByClassName('test')
-
-// document.getElementsById('test').style.backgroundColor = 'red'
-// drop.onclick = (event) => { drop.style.background = 'red' }
-
 const drop = document.getElementsByClassName('drop-gosty')[0]
 const inp = document.getElementsByClassName('gosty')[0]
 inp.onclick = (event) => {
@@ -65,22 +58,21 @@ mbaby.onclick = (event) => {
 pbaby.onclick = (event) => {
     baby = baby + 1
     document.getElementById('baby').textContent = baby
-} 
+}
 
-var gosty = document.getElementsByClassName('gosty')[0].placeholder
+var gosty = document.getElementsByClassName('gosty')[0]
 console.dir(gosty)
+const dropG = document.querySelector('.drop-gosty')
 
-if (vzr + dety == 1 && baby == 0) {
-    document.getElementsByClassName('gosty')[0].placeholder = '1 спальное место'
+dropG.onclick = (event) => {
+    if (vzr || dety > 0, baby==0) {
+        gosty.placeholder = `Количество спальных мест: ${vzr+dety}`
+    }
+    else if (vzr || dety > 0, baby>0) {
+        gosty.placeholder = `Количество спальных мест: ${vzr+dety} и люлек: ${baby}`
+    }
+
+
 }
-if(vzr + dety > 1 && baby == 0){
-    document.getElementsByClassName('gosty')[0].placeholder = vzr + dety + ' спальных мест'
-}
-if(vzr + dety == 1 && baby == 1){
-    document.getElementsByClassName('gosty')[0].placeholder= '1 спальное место и 1 люлка'
-}
-else{document.getElementsByClassName('gosty')[0].placeholder= vzr + dety + ' спальных мест и ' + baby + ' люлек'
-}
-console.log(vzr,dety,baby)
 
 
