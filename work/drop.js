@@ -1,4 +1,4 @@
-const drop = document.getElementsByClassName('drop-gosty')[0]
+const drop = document.getElementsByClassName('gosty__drop')[0]
 const inp = document.getElementsByClassName('gosty')[0]
 inp.onclick = (event) => {
     if (drop.style.display === "none") {
@@ -62,7 +62,7 @@ pbaby.onclick = (event) => {
 
 var gosty = document.getElementsByClassName('gosty')[0]
 console.dir(gosty)
-const dropG = document.querySelector('.drop-gosty')
+const dropG = document.querySelector('.gosty__drop')
 
 dropG.onclick = (event) => {
     if (vzr || dety > 0, baby==0) {

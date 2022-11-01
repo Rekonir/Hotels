@@ -10,30 +10,43 @@ header {
   top: 0px;
   left: 0px;
   background-color: white;
+  z-index: 10;
+}
+header .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+header .logo .logopic {
+  width: 40px;
+  height: 40px;
+}
+header .logo .TOXIC {
+  margin: 10px;
+  font-size: 20px;
 }
 header .navig {
   display: flex;
   justify-content: center;
   flex-basis: 50%;
 }
-header .navig .navig-col {
+header .navig .navig__col {
   box-sizing: border-box;
   display: flex;
-  margin: auto;
-}
-header .navig .navig-col .text-navig {
-  display: flex;
+  align-items: center;
+  justify-self: center;
   color: rgba(31, 32, 65, 0.5);
   text-decoration: none;
-  box-sizing: border-box;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
   letter-spacing: 0em;
   align-items: baseline;
-  margin: 0px 10px;
+  margin: auto 10px;
 }
-header .navig .navig-col .hdr-arrow {
+header .navig__arrow {
   box-sizing: border-box;
   display: flex;
   align-self: center;
@@ -44,19 +57,19 @@ header .navig .navig-col .hdr-arrow {
   margin-bottom: 5px;
   transform: rotate(135deg);
 }
-header .navig .navig-col .hdr-arrow a {
+header .navig__arrow-site {
   display: block;
   width: 20px;
   height: 20px;
   margin: -5px;
 }
-header .bottom {
+header .login {
   display: flex;
   margin: 18px;
   justify-content: flex-start;
   flex-basis: 20%;
 }
-header .bottom .bottom-text {
+header .login .login__text {
   margin: auto;
   padding: 9px 20px;
   font-size: 12px;
@@ -66,7 +79,7 @@ header .bottom .bottom-text {
   text-align: left;
   text-transform: uppercase;
 }
-header .bottom .bottom-in {
+header .login .login__in {
   display: flex;
   color: #bc9cff;
   border: 2px solid;
@@ -74,32 +87,21 @@ header .bottom .bottom-in {
   border-radius: 22px;
   margin: 0px 10px;
 }
-header .bottom .bottom-log {
+header .login .login__log {
   display: flex;
   background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
   color: white;
   margin: 0px 10px;
 }
-header .logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-}
-header .logo .logopic {
-  width: 40px;
-  height: 40px;
-}
-header .logo .TOXIC {
-  margin: 10px;
-  font-size: 20px;
-}
 
 footer {
+  position: relative;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   box-shadow: 0 0 1px;
+  z-index: 10;
+  background: white;
 }
 footer .up-footer {
   box-sizing: border-box;
@@ -131,6 +133,7 @@ footer .up-footer .col-1 .logo {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
 }
 footer .up-footer .col-1 .logo .logopic {
   box-sizing: border-box;
@@ -163,15 +166,15 @@ footer .up-footer .col h2 {
   color: #1f2041;
   text-transform: uppercase;
 }
-footer .up-footer .col ul {
+footer .up-footer .col .col__navig {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
 }
-footer .up-footer .col ul li {
+footer .up-footer .col .col__navig li {
   padding: 10px 0px;
 }
-footer .up-footer .col ul .Email {
+footer .up-footer .col .col__navig .col__Email {
   border: 1px solid rgba(111, 207, 151, 0.25);
   width: 260px;
   height: 44px;
@@ -185,7 +188,7 @@ footer .up-footer .col ul .Email {
   text-decoration: rgba(31, 32, 65, 0.25);
   margin-right: 100px;
 }
-footer .up-footer .col ul a {
+footer .up-footer .col .col__navig .col__Email-spend {
   display: block;
   width: 44px;
   height: 44px;
@@ -193,7 +196,7 @@ footer .up-footer .col ul a {
   top: -22px;
   left: -12px;
 }
-footer .up-footer .col ul .arrow {
+footer .up-footer .col .col__navig .col__arrow {
   box-sizing: border-box;
   position: relative;
   top: -22px;
@@ -202,7 +205,7 @@ footer .up-footer .col ul .arrow {
   height: 2.5px;
   background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
 }
-footer .up-footer .col ul .arrow:after {
+footer .up-footer .col .col__navig .col__arrow:after {
   content: "";
   position: absolute;
   width: 14px;
@@ -212,7 +215,7 @@ footer .up-footer .col ul .arrow:after {
   background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
   transform: rotate(45deg);
 }
-footer .up-footer .col ul .arrow:before {
+footer .up-footer .col .col__navig .col__arrow:before {
   content: "";
   position: absolute;
   width: 14px;
@@ -244,16 +247,16 @@ footer .end-footer .copyright {
   text-align: left;
   color: rgba(31, 32, 65, 0.75);
 }
-footer .end-footer .Social {
+footer .end-footer .social {
   box-sizing: border-box;
   display: flex;
   align-items: center;
 }
-footer .end-footer .Social .s-logo {
+footer .end-footer .social .social__logo {
   box-sizing: border-box;
   padding: 10px;
 }
-footer .end-footer .Social .s-logo img {
+footer .end-footer .social .social__logo .social__icon {
   width: 24px;
   height: 24px;
 }

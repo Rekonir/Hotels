@@ -1,55 +1,76 @@
 body {
   box-sizing: border-box;
-  margin: 73px 0px 0px 0px;
+  margin: 75px 0px 0px 0px;
 }
 
-.side {
-  background: red;
-  width: 30%;
-  height: 1385px;
+.page {
+  position: relative;
+  overflow-x: hidden;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-h1 {
+.side-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 30%;
+  height: 100vh;
+  background: white;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+.side-menu .menu-list {
+  margin-top: 550px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100em;
+  flex-direction: column;
+}
+
+.nomera {
+  box-sizing: border-box;
+}
+.nomera .nomera__header {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
+  text-align: center;
 }
-
-.nomera {
-  box-sizing: border-box;
-  width: 70%;
-  height: 1385px;
-  float: right;
-  display: flex;
-  flex-direction: column;
-}
-.nomera .moz {
+.nomera .nomera__table {
   box-sizing: border-box;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
-.nomera .moz .hotel {
+.nomera .nomera__table .nomera__hotel {
   box-sizing: border-box;
   width: 270px;
   height: 275px;
   display: inline-block;
   background: white;
   padding: 0px;
-  margin: 20px 6px;
+  margin: 20px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
 }
-.nomera .moz .hotel .pict {
+.nomera .nomera__table .nomera__hotel .nomera__oblozhka {
   box-sizing: border-box;
   width: 270px;
   height: 150px;
   border-radius: 4px;
 }
-.nomera .moz .hotel .info {
+.nomera .nomera__table .nomera__hotel .nomera__info {
   box-sizing: border-box;
   position: relative;
   height: 54px;
@@ -57,8 +78,9 @@ h1 {
   align-items: center;
   justify-content: space-around;
   margin: 0px;
+  z-index: 1;
 }
-.nomera .moz .hotel .info .pn {
+.nomera .nomera__table .nomera__hotel .nomera__info .nomera__name {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -66,7 +88,7 @@ h1 {
   line-height: 17px;
   margin: 0px;
 }
-.nomera .moz .hotel .info .type {
+.nomera .nomera__table .nomera__hotel .nomera__info .nomera__type {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -78,7 +100,7 @@ h1 {
   width: 45px;
   margin: 0px;
 }
-.nomera .moz .hotel .info .value {
+.nomera .nomera__table .nomera__hotel .nomera__info .nomera__cost {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -87,7 +109,7 @@ h1 {
   color: rgba(31, 32, 65, 0.5);
   margin: 0px;
 }
-.nomera .moz .hotel .info .per {
+.nomera .nomera__table .nomera__hotel .nomera__info .nomera__per-day {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -95,7 +117,7 @@ h1 {
   color: rgba(31, 32, 65, 0.5);
   margin: 0px;
 }
-.nomera .moz .hotel .info::after {
+.nomera .nomera__table .nomera__hotel .nomera__info::after {
   content: "";
   position: absolute;
   left: 20px;
@@ -104,6 +126,7 @@ h1 {
   width: 230px;
   height: 1px;
   margin: 0px;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=page.css.map */

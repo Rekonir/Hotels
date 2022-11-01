@@ -23,15 +23,15 @@ $shrift: "Montserrat", sans-serif;
         letter-spacing: 0em;
         text-align: left;
     }
-    .date {
+    .reg__date {
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
-        .prib {
+        .reg__prib {
             margin-right: 20px;
         }
     }
-    h2 {
+    .reg__text {
         font-family: $shrift;
         font-weight: 700;
         font-size: 12px;
@@ -40,7 +40,7 @@ $shrift: "Montserrat", sans-serif;
         text-transform: uppercase;
         margin: 21px 0px 6px 0px;
     }
-    .date-reg {
+    .reg__date-input {
         box-sizing: border-box;
         width: 150px;
         height: 44px;
@@ -100,7 +100,7 @@ input.gosty[type="text"] {
     padding: 10px;
     border-radius: 4px;
 }
-.drop-gosty {
+.gosty__drop {
     box-sizing: border-box;
     position: absolute;
     background: white;
@@ -118,7 +118,7 @@ input.gosty[type="text"] {
     padding: 10px;
     margin: 5px 0px;
     z-index: 1;
-    .drop-gosty-schet {
+    .gosty__drop-schet {
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;

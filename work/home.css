@@ -12,7 +12,7 @@ body .fon {
   background-size: cover;
   padding: 0px 140px;
 }
-body .fon .right-text {
+body .fon .fon__text {
   display: flex;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -22,7 +22,7 @@ body .fon .right-text {
   text-align: right;
   color: rgba(31, 32, 65, 0.75);
 }
-body .fon .reg {
+body .fon .reg-box {
   display: flex;
 }
 

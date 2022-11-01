@@ -3,115 +3,121 @@ html(lang="ru")
   head 
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-    title Page two
+    title Hotels
     link(rel="icon", href="../file/icon.png", type="image/x-icon")
     link(rel="stylesheet", href="Page.css")
     script(src="hotel.js")
   body
     header
       include Header.pug
-    .nomera
-      h1 Номера, которые мы для вас подобрали
-      table.moz
-        tr
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 888
-              p.type люкс
-              p.value 9 990₽
-              p.per в сутки
+    .page
+      .side-menu
+        .menu-list
+          p Даты пребывания в отеле
+          p Гости
+          p Цена
+          p Правила
+          p Доступность
+          p Удобства
+          p Доп
+      .nomera
+        h1.nomera__header Номера, которые мы для вас подобрали
+        .nomera__table
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 888
+              p.nomera__type люкс
+              p.nomera__cost 9 990₽
+              p.nomera__per-day в сутки
             .star
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 856
-              p.type 
-              p.value 7 300₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 856
+              p.nomera__type 
+              p.nomera__cost 7 300₽
+              p.nomera__per-day в сутки
             .star
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 678
-              p.type 
-              p.value 5 500₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 678
+              p.nomera__type 
+              p.nomera__cost 5 500₽
+              p.nomera__per-day в сутки
             .star
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 666
-              p.type 
-              p.value 5 000₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 666
+              p.nomera__type 
+              p.nomera__cost 5 000₽
+              p.nomera__per-day в сутки
             .star
-        tr
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 840
-              p.type 
-              p.value 9 900₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 840
+              p.nomera__type 
+              p.nomera__cost 9 900₽
+              p.nomera__per-day в сутки
             .star
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 740
-              p.type 
-              p.value 6 000₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 740
+              p.nomera__type 
+              p.nomera__cost 6 000₽
+              p.nomera__per-day в сутки
             .star
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 450
-              p.type 
-              p.value 5 300₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 450
+              p.nomera__type 
+              p.nomera__cost 5 300₽
+              p.nomera__per-day в сутки
             .star
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 444
-              p.type 
-              p.value 5 000₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 444
+              p.nomera__type 
+              p.nomera__cost 5 000₽
+              p.nomera__per-day в сутки
             .star
-        tr
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 980
-              p.type люкс
-              p.value 8 500₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 980
+              p.nomera__type люкс
+              p.nomera__cost 8 500₽
+              p.nomera__per-day в сутки
             .star
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 982
-              p.type 
-              p.value 5 800₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 982
+              p.nomera__type 
+              p.nomera__cost 5 800₽
+              p.nomera__per-day в сутки
             .star
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 350
-              p.type 
-              p.value 5 000₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 350
+              p.nomera__type 
+              p.nomera__cost 5 000₽
+              p.nomera__per-day в сутки
             .star
-          td.hotel
-            img.pict(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
-            .info
-              p.pn № 352
-              p.type 
-              p.value 5 000₽
-              p.per в сутки
+          .nomera__hotel
+            img.nomera__oblozhka(src="https://s.101hotelscdn.ru/uploads/image/hotel_image/10846/768300_preview.jpg", alt="Обложки нет")
+            .nomera__info
+              p.nomera__name № 352
+              p.nomera__type 
+              p.nomera__cost 5 000₽
+              p.nomera__per-day в сутки
             .star
-    .side
     footer
       include Footer.pug

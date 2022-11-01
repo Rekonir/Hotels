@@ -18,15 +18,15 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.reg .date {
+.reg .reg__date {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
 }
-.reg .date .prib {
+.reg .reg__date .reg__prib {
   margin-right: 20px;
 }
-.reg h2 {
+.reg .reg__text {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 12px;
@@ -35,7 +35,7 @@
   text-transform: uppercase;
   margin: 21px 0px 6px 0px;
 }
-.reg .date-reg {
+.reg .reg__date-input {
   box-sizing: border-box;
   width: 150px;
   height: 44px;
@@ -96,7 +96,7 @@ input.gosty[type=text] {
   border-radius: 4px;
 }
 
-.drop-gosty {
+.gosty__drop {
   box-sizing: border-box;
   position: absolute;
   background: white;
@@ -115,14 +115,14 @@ input.gosty[type=text] {
   margin: 5px 0px;
   z-index: 1;
 }
-.drop-gosty .drop-gosty-schet {
+.gosty__drop .gosty__drop-schet {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 7px 0px;
 }
-.drop-gosty .drop-gosty-schet h2 {
+.gosty__drop .gosty__drop-schet h2 {
   margin: 0px;
 }
 

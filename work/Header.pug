@@ -7,32 +7,22 @@ html(lang="ru")
     link(rel="stylesheet", href="HF.css")
   body
     header
-      .logo
+      a.logo(href="/work/Home.html" target="_blank")
         img.logopic(src="/file/logo.png", alt="Лого не загрузилось")
         .TOXIN
           p.TOXIC TOXIC
-      .navig
-        .navig-col
-          a.text-navig(href="#")
-            p О нас
-        .navig-col
-          a.text-navig(href="#")
-            p Услуги 
-          .hdr-arrow
-            a(href="#")
-        .navig-col    
-          a.text-navig(href="#")
-            p Вакансии
-        .navig-col
-          a.text-navig(href="#")
-            p Новости
-        .navig-col
-          a.text-navig(href="#")
-            p Соглашение
-          .hdr-arrow
-            a(href="#")
-      .bottom
-        .bottom-in
-          p.bottom-text Войти
-        .bottom-log
-          p.bottom-text Зарегистрироваться 
+      nav.navig
+        a.navig__col(href='#') О нас
+        a.navig__col(href='#') Услуги 
+        .navig__arrow
+          a.navig__arrow-site(href="#")
+        a.navig__col(href='#') Вакансии
+        a.navig__col(href='#') Новости
+        a.navig__col(href='#') Соглашение
+        .navig__arrow
+          a(href="#")
+      .login
+        .login__in
+          p.login__text Войти
+        .login__log
+          p.login__text Зарегистрироваться 
