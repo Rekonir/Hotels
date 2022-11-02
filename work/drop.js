@@ -61,7 +61,6 @@ pbaby.onclick = (event) => {
 }
 
 var gosty = document.getElementsByClassName('gosty')[0]
-console.dir(gosty)
 const dropG = document.querySelector('.gosty__drop')
 
 dropG.onclick = (event) => {

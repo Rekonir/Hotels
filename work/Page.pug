@@ -6,12 +6,13 @@ html(lang="ru")
     title Hotels
     link(rel="icon", href="../file/icon.png", type="image/x-icon")
     link(rel="stylesheet", href="Page.css")
-    script(src="hotel.js")
   body
     header
       include Header.pug
     .page
       .side-menu
+        .menu-btn 
+          .menu-btn__animation 
         .menu-list
           p Даты пребывания в отеле
           p Гости
@@ -119,5 +120,7 @@ html(lang="ru")
               p.nomera__cost 5 000₽
               p.nomera__per-day в сутки
             .star
+    
+    script(src="side-menu.js")
     footer
       include Footer.pug
