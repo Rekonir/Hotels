@@ -28,21 +28,86 @@ body {
     top: 0;
     transition: 0.5s;
     transform: translateX(-100%);
+    overflow-x: scroll;
     .menu-list {
         display: flex;
         justify-content: space-around;
         align-items: center;
         height: 100em;
         flex-direction: column;
+        padding: 20px;
+        .menu-list__row {
+            display: flex;
+            flex-direction: column;
+            h2.menu-list__header {
+                font-family: $shrift;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                color: $styleDark;
+                text-transform: uppercase;
+            }
+
+            input[type="checkbox"] {
+                display: none;
+            }
+            input[type="checkbox"]:checked + label::before {
+                background-image: url(../file/checked.png);
+                background-size: 100%;
+                border: 1px solid rgba($stylePur, 0.5);
+            }
+            label {
+                padding-left: 10px;
+                margin: 5px;
+                font-family: $shrift;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: rgba($styleDark, 0.5);
+            }
+            .menu-list__dostyp-label {display: block;
+                font-family: $shrift;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: rgba($styleDark, 0.75);
+                p {padding-left: 20px;
+                    font-family: $shrift;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: rgba($styleDark, 0.5);
+                }
+            }
+            label::before {
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                border: 1px solid rgba($styleDark, 0.25);
+                border-radius: 4px;
+                box-shadow: 0px 10px 20px rgba($styleDark, 0.1);
+                vertical-align: middle;
+                margin-left: -10px;
+                margin-right: 10px;
+                transition: 0.2s;
+            }
+            .menu-list__cost{
+                margin: 0px;
+            }
+        }
     }
     .menu-btn {
         display: block;
         position: absolute;
-        top: 85px;
+        top: 15px;
         right: -40px;
         width: 30px;
         height: 30px;
-        background: $grad;        
+        background: $grad;
         box-shadow: 0px 10px 20px rgba($styleDark, 0.1);
         cursor: pointer;
         z-index: 8;
@@ -191,13 +256,12 @@ body {
                 z-index: 1;
             }
         }
-        .nomera__hotel:hover{
+        .nomera__hotel:hover {
             transform: translateY(-25px) scale(105%);
-            
         }
     }
 }
 .nomera_active {
     transform: translateX(15%);
-    margin: 0px 85px;;
+    margin: 0px 85px;
 }

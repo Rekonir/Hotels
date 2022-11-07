@@ -14,13 +14,49 @@ html(lang="ru")
         .menu-btn 
           .menu-btn__animation 
         .menu-list
-          p Даты пребывания в отеле
-          p Гости
-          p Цена
-          p Правила
-          p Доступность
-          p Удобства
-          p Доп
+          .menu-list__row
+            h2.menu-list__header Даты прибывания в отеле
+            input(type="text")
+          .menu-list__row
+            h2.menu-list__header Гости
+            input(type="text")
+          .menu-list__row
+            h2.menu-list__header Диапозон цены
+            p.menu-list__cost 5 500 - 6 000
+            input(type="text")
+          .menu-list__row
+            h2.menu-list__header Правила дома
+            input.menu-list__pravila#smoke(type="checkbox", name="pravila") 
+            label.menu-list__pravila-label(for="smoke") Можно курить
+            input.menu-list__pravila#pet(type="checkbox", name="pravila") 
+            label.menu-list__pravila-label(for="pet") Можно с питомцами
+            input.menu-list__pravila#visiter(type="checkbox", name="pravila") 
+            label.menu-list__pravila-label(for="visiter") Можно пригласить гостей (до 10 человек)
+          .menu-list__row
+            h2.menu-list__header Доступность
+            input.menu-list__dostyp#hallway(type="checkbox", name="dostyp") 
+            label.menu-list__dostyp-label(for="hallway") Широкий коридор
+              p Ширина коридоров в номере <br>не менее 91 см.
+            input.menu-list__dostyp#helper(type="checkbox", name="dostyp") 
+            label.menu-list__dostyp-label(for="helper")  Помощник для инвалидов
+              p На 1 этаже вас встретит специалист <br>и проводит до номера.
+          .menu-list__row
+            h2.menu-list__header Удобства номера
+            input(type="text")
+          .menu-list__row
+            h2.menu-list__header Дополнительные удобства
+            input.menu-list__dop#breakfast(type="checkbox", name="dop") 
+            label.menu-list__dop-label(for="breakfast") Завтрак
+            input.menu-list__dop#table(type="checkbox", name="dop") 
+            label.menu-list__dop-label(for="table") Письманный стол
+            input.menu-list__dop#chair(type="checkbox", name="dop") 
+            label.menu-list__dop-label(for="chair") Стул для кормления
+            input.menu-list__dop#bed(type="checkbox", name="dop") 
+            label.menu-list__dop-label(for="bed") Кроватка
+            input.menu-list__dop#TV(type="checkbox", name="dop") 
+            label.menu-list__dop-label(for="TV") Телевизор
+            input.menu-list__dop#shampoo(type="checkbox", name="dop")
+            label.menu-list__dop-label(for="shampoo")  Шампунь
       .nomera
         h1.nomera__header Номера, которые мы для вас подобрали
         .nomera__table
@@ -120,7 +156,7 @@ html(lang="ru")
               p.nomera__cost 5 000₽
               p.nomera__per-day в сутки
             .star
-    
+
     script(src="side-menu.js")
     footer
       include Footer.pug
