@@ -20,7 +20,6 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 15%;
     background: white;
     box-shadow: 0px 10px 20px rgba($styleDark, 0.1);
     z-index: 2;
@@ -28,14 +27,15 @@ body {
     top: 0;
     transition: 0.5s;
     transform: translateX(-100%);
-    overflow-x: scroll;
     .menu-list {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        width: 195px;
         height: 100em;
         flex-direction: column;
         padding: 20px;
+        overflow: hidden;
         .menu-list__row {
             display: flex;
             flex-direction: column;
@@ -65,7 +65,8 @@ body {
                 line-height: 18px;
                 color: rgba($styleDark, 0.5);
             }
-            .menu-list__dostyp-label {display: block;
+            .menu-list__dostyp-label {
+                display: block;
                 font-family: $shrift;
                 font-size: 14px;
                 font-weight: 700;
@@ -73,7 +74,8 @@ body {
                 letter-spacing: 0em;
                 text-align: left;
                 color: rgba($styleDark, 0.75);
-                p {padding-left: 20px;
+                p {
+                    padding-left: 20px;
                     font-family: $shrift;
                     font-weight: 400;
                     font-size: 14px;
@@ -95,11 +97,12 @@ body {
                 margin-right: 10px;
                 transition: 0.2s;
             }
-            .menu-list__cost{
+            .menu-list__cost {
                 margin: 0px;
             }
         }
     }
+
     .menu-btn {
         display: block;
         position: absolute;
@@ -153,16 +156,15 @@ body {
         }
     }
 }
-
 .side-menu_active {
     transform: translateX(0%);
 }
+
 .nomera {
     box-sizing: border-box;
     margin: 0px 100px;
     transform: translateX(0%);
     transition: 0.5s;
-
     .nomera__header {
         box-sizing: border-box;
         font-family: $shrift;
@@ -179,7 +181,6 @@ body {
         align-items: center;
         width: 100%;
         flex-wrap: wrap;
-
         .nomera__hotel {
             box-sizing: border-box;
             width: 270px;
@@ -259,9 +260,75 @@ body {
         .nomera__hotel:hover {
             transform: translateY(-25px) scale(105%);
         }
+        .nomera__otziv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .star {
+                overflow: hidden;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                align-items: baseline;
+                margin: 10px;
+                &:not(:checked) > input.star__point {
+                    display: none;
+                }
+                &:not(:checked) > label.star__point-label {
+                    cursor: pointer;
+                    font-size: 32px;
+                    line-height: 32px;
+                    color: lightgrey;
+                    text-shadow: 1px 1px #bbb;
+                }
+                &:not(:checked) > label.star__point-label::before {
+                    content: "★";
+                }
+                input.star__point:checked ~ label.star__point-label {
+                    color: $stylePur;
+                    text-shadow: 1px 1px $styleDark;
+                }
+                &:not(:checked) > label.star__point-label:hover,
+                &:not(:checked) > label.star__point-label :hover ~ label.star__point-label {
+                    color: $stylePur;
+                }
+                input.star__point:checked + label.star__point-label:hover,
+                input.star__point:checked + label.star__point-label:hover ~ label.star__point-label,
+                label.star__point-label:hover ~ input.star__point:checked ~ label.star__point-label {
+                    color: $stylePur;
+                    text-shadow: 1px 1px $styleGr;
+                }
+                label.star__point-label:active {
+                    position: relative;
+                }
+            }
+            .otziv {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 0px 10px;
+                .otziv__text {
+                    font-family: $shrift;
+                    font-style: normal;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: rgba($styleDark, 0.5);
+                }
+                .otziv__value {
+                    font-family: $shrift;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: rgba($styleDark, 0.5);
+                    margin-left: 5px;
+                }
+            }
+        }
     }
 }
+
 .nomera_active {
-    transform: translateX(15%);
+    transform: translateX(160px);
     margin: 0px 85px;
 }

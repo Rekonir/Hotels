@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   box-sizing: border-box;
   margin: 75px 0px 0px 0px;
@@ -16,7 +17,6 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 15%;
   background: white;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
   z-index: 2;
@@ -24,15 +24,16 @@ body {
   top: 0;
   transition: 0.5s;
   transform: translateX(-100%);
-  overflow-x: scroll;
 }
 .side-menu .menu-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 195px;
   height: 100em;
   flex-direction: column;
   padding: 20px;
+  overflow: hidden;
 }
 .side-menu .menu-list .menu-list__row {
   display: flex;
@@ -257,9 +258,73 @@ body {
 .nomera .nomera__table .nomera__hotel:hover {
   transform: translateY(-25px) scale(105%);
 }
+.nomera .nomera__table .nomera__otziv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nomera .nomera__table .nomera__otziv .star {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin: 10px;
+}
+.nomera .nomera__table .nomera__otziv .star:not(:checked) > input.star__point {
+  display: none;
+}
+.nomera .nomera__table .nomera__otziv .star:not(:checked) > label.star__point-label {
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 32px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+.nomera .nomera__table .nomera__otziv .star:not(:checked) > label.star__point-label::before {
+  content: "★";
+}
+.nomera .nomera__table .nomera__otziv .star input.star__point:checked ~ label.star__point-label {
+  color: #bc9cff;
+  text-shadow: 1px 1px #1f2041;
+}
+.nomera .nomera__table .nomera__otziv .star:not(:checked) > label.star__point-label:hover, .nomera .nomera__table .nomera__otziv .star:not(:checked) > label.star__point-label :hover ~ label.star__point-label {
+  color: #bc9cff;
+}
+.nomera .nomera__table .nomera__otziv .star input.star__point:checked + label.star__point-label:hover,
+.nomera .nomera__table .nomera__otziv .star input.star__point:checked + label.star__point-label:hover ~ label.star__point-label,
+.nomera .nomera__table .nomera__otziv .star label.star__point-label:hover ~ input.star__point:checked ~ label.star__point-label {
+  color: #bc9cff;
+  text-shadow: 1px 1px #6fcf97;
+}
+.nomera .nomera__table .nomera__otziv .star label.star__point-label:active {
+  position: relative;
+}
+.nomera .nomera__table .nomera__otziv .otziv {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px 10px;
+}
+.nomera .nomera__table .nomera__otziv .otziv .otziv__text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.nomera .nomera__table .nomera__otziv .otziv .otziv__value {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  margin-left: 5px;
+}
 
 .nomera_active {
-  transform: translateX(15%);
+  transform: translateX(160px);
   margin: 0px 85px;
 }
 
