@@ -61,7 +61,7 @@ html(lang="ru")
         h1.nomera__header Номера, которые мы для вас подобрали
         .nomera__table
           .nomera__hotel
-            img.nomera__oblozhka(src="https://t-cf.bstatic.com/xdata/images/hotel/square200/243756727.webp?k=a4b8fea80d4631663cf3bfcf6d0c8d53c94cf5b0b18c33ac8e3aab7ab84662a2&o=", alt="Обложки нет")
+            img.nomera__oblozhka(src="https://cdn1.ozone.ru/s3/hotels-widget-api/1848484048000/2349664834000/wc1000/12248086_1659905764285865_391157404186974832_o.jpg", alt="Обложки нет")
             .nomera__info
               p.nomera__name № 888
               p.nomera__type люкс
@@ -324,7 +324,17 @@ html(lang="ru")
               .otziv
                 p.otziv__text Отзывов:
                 p.otziv__value 159
-
+      .page__number
+        a.page__number-arrow(href="error.html")
+          .page__number-arrow-left
+        a.page__number-point_active(href="error.html") 1
+        a.page__number-point(href="error.html") 2
+        a.page__number-point(href="error.html") 3
+        a.page__number-point(href="error.html") 4
+        a.page__number-point(href="error.html") ...
+        a.page__number-point(href="error.html") 11
+        a.page__number-arrow(href="error.html")
+          .page__number-arrow-right
     script(src="side-menu.js")
     footer
       include Footer.pug

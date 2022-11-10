@@ -7,7 +7,9 @@ body {
 .page {
   position: relative;
   overflow-x: hidden;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
@@ -30,7 +32,6 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 195px;
-  height: 100em;
   flex-direction: column;
   padding: 20px;
   overflow: hidden;
@@ -107,7 +108,7 @@ body {
   width: 30px;
   height: 30px;
   background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.5);
   cursor: pointer;
   z-index: 8;
   border-radius: 50%;
@@ -170,6 +171,7 @@ body {
   font-size: 24px;
   line-height: 29px;
   text-align: center;
+  text-shadow: 0 0 10px rgba(31, 32, 65, 0.1);
 }
 .nomera .nomera__table {
   box-sizing: border-box;
@@ -187,13 +189,13 @@ body {
   background: white;
   padding: 0px;
   margin: 20px;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
   border-radius: 4px;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 .nomera .nomera__table .nomera__hotel .nomera__oblozhka {
   box-sizing: border-box;
-  width: 270px;
+  width: 100%;
   height: 150px;
   border-radius: 4px;
 }
@@ -257,6 +259,7 @@ body {
 }
 .nomera .nomera__table .nomera__hotel:hover {
   transform: translateY(-25px) scale(105%);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.5), 0px 10px 20px rgba(31, 32, 65, 0.5);
 }
 .nomera .nomera__table .nomera__otziv {
   display: flex;
@@ -326,6 +329,99 @@ body {
 .nomera_active {
   transform: translateX(160px);
   margin: 0px 85px;
+}
+
+.page__number {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  transform: translateX(0%);
+  transition: 0.5s;
+}
+.page__number .page__number-point {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 40px;
+  text-decoration: none;
+  color: rgba(31, 32, 65, 0.5);
+  border-radius: 50%;
+  margin: 5px;
+  transition: 0.25s;
+}
+.page__number .page__number-point:hover {
+  background: #6fcf97;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(31, 32, 65, 0.5);
+}
+.page__number .page__number-point_active {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 40px;
+  text-decoration: none;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+  box-shadow: 0 0 10px rgba(31, 32, 65, 0.5);
+  color: white;
+  margin: 5px;
+}
+.page__number .page__number-arrow {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #6fcf97;
+  box-shadow: 0 0 10px rgba(31, 32, 65, 0.5);
+  margin: 5px;
+  transition: 0.25s;
+}
+.page__number .page__number-arrow .page__number-arrow-left::after,
+.page__number .page__number-arrow .page__number-arrow-left::before,
+.page__number .page__number-arrow .page__number-arrow-right::after,
+.page__number .page__number-arrow .page__number-arrow-right::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 17.5px;
+  left: 10px;
+  width: 20px;
+  height: 5px;
+  background: white;
+  border-radius: 4px;
+}
+.page__number .page__number-arrow .page__number-arrow-left::before {
+  transform-origin: left;
+  transform: rotate(45deg) translateY(-2px);
+}
+.page__number .page__number-arrow .page__number-arrow-left::after {
+  transform-origin: left;
+  transform: rotate(-45deg) translateY(2px);
+}
+.page__number .page__number-arrow .page__number-arrow-right::before {
+  transform-origin: right;
+  transform: rotate(45deg) translateY(2px);
+}
+.page__number .page__number-arrow .page__number-arrow-right::after {
+  transform-origin: right;
+  transform: rotate(-45deg) translateY(-2px);
+}
+.page__number .page__number-arrow:hover {
+  transform: scale(115%);
+}
+
+.page__number_active {
+  transform: translateX(160px);
 }
 
 /*# sourceMappingURL=page.css.map */

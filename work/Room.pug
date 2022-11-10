@@ -1,0 +1,68 @@
+doctype html 
+html(lang="ru")
+  head 
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title Room details
+    link(rel="icon", href="../file/icon.png", type="image/x-icon")
+    link(rel="stylesheet", href="Room.css")
+  body
+    header
+      include Header.pug
+    .room
+      .photo
+        .photo__main
+          img.main(src="https://cdn1.ozone.ru/s3/hotels-widget-api/1848484048000/2349664834000/wc1000/12248086_1659905764285865_391157404186974832_o.jpg", alt="Нет главной обложки")
+        .photo__add
+          img.add(src="https://cdn1.ozone.ru/s3/hotels-widget-api/t/1024x768/content/dd/a6/wc1000/dda639f893ce2f16dde7e1e01959ae1f12b3a3fe.jpeg", alt="Нет фото №1")
+          img.add(src="https://cdn1.ozone.ru/s3/hotels-widget-api/1848484048000/2349664834000/wc1000/c528c124d6363d1d62e0dbfa99c3e072.jpg", alt="Нет фото №2")
+      .content
+        .info
+          .about
+            h2.about__header Сведения о номере
+            .about__position
+              .about__icon
+                img.icon(src="https://www.flaticon.com/ru/free-icons/-", alt="Нет иконки")
+              .about__text
+                h3.about__subheader Комфорт
+                p.about__content  Шумопоглащающие стены
+            .about__position
+              .about__icon
+                
+                img.icon(src="https://cdn-icons-png.flaticon.com/512/2896/2896509.png", alt="Нет иконки")
+              .about__text
+                h3.about__subheader Удобство
+                p.about__content  Окно в каждой из спален
+            .about__position
+              .about__icon
+                
+                img.icon(src="https://cdn-icons-png.flaticon.com/512/2309/2309616.png", alt="Нет иконки")
+              .about__text
+                h3.about__subheader Уют
+                p.about__content  Номер оснащен камином
+          .opinion
+            h2.opinion__header
+            .opinion__graf
+              .opinion__circle
+              .opinion__legends
+                p.opinion__text1 Великолепно
+                p.opinion__text2 Хорошо
+                p.opinion__text3 Удволетворительно
+                p.opinion__text4 Разочарован
+        .coment
+        .rule
+          .core
+            h2.core__header Правила
+            ul.core__ul
+              li.core__li
+                p.core__text Нельзя с питомцами
+              li.core__li
+                p.core__text Без вечеринок
+              li.core__li 
+                p.core__text Время прибытия - после 13:00,<br> а выезд до 12:00
+          .cancel
+            h2.cancel__header Отмена
+            p.cancel__text Бесплатная отмена в течение 48 ч. После <br> этого при отмене не позднее чем за 5 дн. до <br> прибытия вы получите полный возврат за <br> вычетом сбора за услуги.
+
+    footer
+      include Footer.pug
