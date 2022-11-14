@@ -14,7 +14,7 @@ html(lang="ru")
         .photo__main
           img.main(src="https://cdn1.ozone.ru/s3/hotels-widget-api/1848484048000/2349664834000/wc1000/12248086_1659905764285865_391157404186974832_o.jpg", alt="Нет главной обложки")
         .photo__add
-          img.add(src="https://cdn1.ozone.ru/s3/hotels-widget-api/t/1024x768/content/dd/a6/wc1000/dda639f893ce2f16dde7e1e01959ae1f12b3a3fe.jpeg", alt="Нет фото №1")
+          img.add(src="http://m.jsptravel.ru/suite_bedroom_office_7666.jpg", alt="Нет фото №1")
           img.add(src="https://cdn1.ozone.ru/s3/hotels-widget-api/1848484048000/2349664834000/wc1000/c528c124d6363d1d62e0dbfa99c3e072.jpg", alt="Нет фото №2")
       .content
         .info
@@ -22,20 +22,18 @@ html(lang="ru")
             h2.about__header Сведения о номере
             .about__position
               .about__icon
-                img.icon(src="https://www.flaticon.com/ru/free-icons/-", alt="Нет иконки")
+                img.icon(src="https://cdn-icons-png.flaticon.com/512/3746/3746927.png", alt="Нет иконки")
               .about__text
                 h3.about__subheader Комфорт
                 p.about__content  Шумопоглащающие стены
             .about__position
               .about__icon
-                
                 img.icon(src="https://cdn-icons-png.flaticon.com/512/2896/2896509.png", alt="Нет иконки")
               .about__text
                 h3.about__subheader Удобство
                 p.about__content  Окно в каждой из спален
             .about__position
-              .about__icon
-                
+              .about__icon                
                 img.icon(src="https://cdn-icons-png.flaticon.com/512/2309/2309616.png", alt="Нет иконки")
               .about__text
                 h3.about__subheader Уют
@@ -44,12 +42,28 @@ html(lang="ru")
             h2.opinion__header
             .opinion__graf
               .opinion__circle
+                .opinion__area1
+                .opinion__area2
+                .opinion__area3
+                .opinion__area4
               .opinion__legends
                 p.opinion__text1 Великолепно
                 p.opinion__text2 Хорошо
                 p.opinion__text3 Удволетворительно
                 p.opinion__text4 Разочарован
-        .coment
+        .comment
+          h2.comment__header Отзывы поситетелей номера
+          .comment__people
+            .comment__pict
+              img.comment__avatar(src="https://cdn-icons-png.flaticon.com/512/5046/5046928.png", alt="Нет аватарки")
+              .comment__like 
+                img.comment__like-pict(src="https://cdn-icons-png.flaticon.com/512/3446/3446990.png", alt="Нет лайка")
+                p.comment__value 23
+            .comment__content
+              h3.comment__name Мурад Сарафанов
+              p.comment__date 5 дней назад
+              p.comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+            
         .rule
           .core
             h2.core__header Правила
@@ -63,6 +77,7 @@ html(lang="ru")
           .cancel
             h2.cancel__header Отмена
             p.cancel__text Бесплатная отмена в течение 48 ч. После <br> этого при отмене не позднее чем за 5 дн. до <br> прибытия вы получите полный возврат за <br> вычетом сбора за услуги.
-
+    
+    script(src="room.js")
     footer
       include Footer.pug
