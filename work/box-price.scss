@@ -1,0 +1,141 @@
+$styleDark: #1f2041;
+$stylePur: #bc9cff;
+$styleGr: #6fcf97;
+$grad: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+$shrift: "Montserrat", sans-serif;
+
+.box-price {
+    padding: 30px;
+    width: 380px;
+    height: 512px;
+    border: 1px solid rgba($styleDark, 0.15);
+    box-shadow: 0 0 25px rgba($styleDark, 0.2);
+    background: white;
+}
+.box__text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    h1.box__name {
+        font-family: $shrift;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 17px;
+        color: $styleDark;
+    }
+    p.box__type {
+        margin-right: 100px;
+        margin-left: 10px;
+        font-family: $shrift;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $stylePur;
+    }
+    p.box__cost {
+        margin-right: 10px;
+        font-family: $shrift;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba($styleDark, 0.75);
+    }
+    p.box__per-day {
+        font-family: $shrift;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba($styleDark, 0.5);
+    }
+}
+.box__date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    h2.box__subheader {
+        font-family: $shrift;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $styleDark;
+    }
+    input.date[type="date"] {
+        font-family: $shrift;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba($styleDark, 0.75);
+        width: 150px;
+        height: 44px;
+        border: 1px solid rgba($styleDark, 0.25);
+        border-radius: 4px;
+    }
+    input.date[type="date"]::-webkit-calendar-picker-indicator {
+        background-image: url(/file/calendar.png);
+        width: 20px;
+        height: 20px;
+        margin: 0px;
+    }
+}
+input.gosty[type="text"] {
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgba($styleDark, 0.25);
+}
+.gosty__drop {
+    box-sizing: border-box;
+    position: absolute;
+    background: white;
+    width: 318px;
+    display: none;
+    flex-direction: column;
+    border: 1px solid rgba($styleDark, 0.5);
+    box-shadow: 0px 10px 20px rgba($styleDark, 0.05);
+    font-family: $shrift;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: $styleDark;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 5px 0px;
+    z-index: 1;
+    .gosty__drop-schet {
+        visibility: hidden;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 7px 0px;
+        h2{
+        margin: 0px;}
+    }
+}
+.schet {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    .minus {
+        width: 30px;
+        height: 30px;
+        margin: 0px 16px;
+        padding: 0px;
+    }
+    .itog{
+        display: flex;
+        width: 12px;
+
+    }
+    .plus {
+        width: 30px;
+        height: 30px;
+        margin: 0px 16px;
+        padding: 0px;
+    }
+}

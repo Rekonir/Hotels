@@ -65,12 +65,14 @@ body {
     }
     .content {
         width: 100%;
+        float: left;
         margin: 70px 140px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         .info {
+            width: 66.67%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -109,6 +111,7 @@ body {
                     height: 120px;
                     margin: 20px;
                     border-radius: 50%;
+                    background-color: red;
                     .opinion__area1 {
                         display: block;
                         position: absolute;
@@ -170,9 +173,11 @@ body {
         .comment {
             display: flex;
             flex-direction: column;
+            margin: 30px 140px 0px 140px;
             .comment__people {
                 display: flex;
                 flex-direction: row;
+                margin-bottom: 30px;
                 .comment__pict {
                     display: flex;
                     flex-direction: column;
@@ -199,16 +204,24 @@ body {
                         border-radius: 20px;
                         box-shadow: 0 0 5px rgba($styleDark, 0.25);
                         .comment__value {
+                            position: relative;
+                            margin-left: 15px;
                             font-family: $shrift;
                             font-weight: 400;
                             font-size: 10px;
                             line-height: 20px;
                             color: rgba($styleDark, 0.5);
                         }
-                        img.comment__like-pict {
+                        .comment__value::before {
+                            content: "";
+                            position: absolute;
+                            top: 2px;
+                            right: 15px;
+                            display: block;
                             width: 15px;
                             height: 15px;
-                            margin-right: 5px;
+                            background-image: url(https://cdn-icons-png.flaticon.com/512/3446/3446990.png);
+                            background-size: cover;
                         }
                     }
                     .comment__like_active {
@@ -225,26 +238,136 @@ body {
                         border-radius: 20px;
                         box-shadow: 0 0 5px $stylePur;
                         .comment__value_active {
+                            position: relative;
+                            margin-left: 15px;
                             font-family: $shrift;
                             font-weight: 400;
                             font-size: 10px;
                             line-height: 20px;
                             color: $stylePur;
                         }
-                        img.comment__like-pict_active {
+                        .comment__value_active::before {
+                            content: "";
+                            position: absolute;
+                            top: 2px;
+                            right: 15px;
+                            display: block;
                             width: 15px;
                             height: 15px;
-                            margin-right: 5px;
+                            background-image: url(https://cdn-icons-png.flaticon.com/512/5249/5249243.png);
+                            background-size: cover;
                         }
                     }
                 }
             }
         }
         .rule {
+            margin: 0px 140px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            width: 66.6666%;
+            .core {
+                li.core__li {
+                    color: rgba($styleDark, 0.25);
+                }
+            }
         }
     }
+}
+.menu-btn {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $grad;
+    cursor: pointer;
+    z-index: 2;
+    .btn-arrow,
+    .btn-arrow::before,
+    .btn-arrow::after {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: white;
+        transition: 0.5s;
+    }
+    .btn-arrow {
+        position: relative;
+        top: 23px;
+        left: 7.5px;
+    }
+    .btn-arrow::before {
+        position: absolute;
+        top: -10px;
+        left: 0px;
+    }
+    .btn-arrow::after {
+        position: absolute;
+        top: 10px;
+        left: 0px;
+    }
+}
+.menu-btn_active {
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $grad;
+    cursor: pointer;
+    transform: scale(60%);
+    transition: 0.5s;
+    z-index: 2;
+    .btn-arrow_active,
+    .btn-arrow_active::before,
+    .btn-arrow_active::after {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: white;
+        transition: 0.5s;
+    }
+    .btn-arrow_active {
+        position: relative;
+        top: 23px;
+        left: 7.5px;
+        height: 0px;
+        transition: 0s;
+    }
+    .btn-arrow_active::before {
+        position: absolute;
+        top: 0px;
+        transform: rotate(45deg);
+        background-color: white;
+    }
+    .btn-arrow_active::after {
+        position: absolute;
+        top: 0px;
+        transform: rotate(-45deg);
+        background-color: white;
+    }
+}
+.box{
+    position: fixed;
+    left: 5%;
+    bottom: 5%;
+    transform: scale(0);
+    transition: 0.5s;
+    transform-origin: left bottom;
+}
+.box_active{
+    position: fixed;
+    left: 5%;
+    bottom: 5%;
+    transform: scale(100%);
+    transition: 0.5s;
 }

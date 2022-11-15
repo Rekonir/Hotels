@@ -59,6 +59,7 @@ body {
 }
 .room .content {
   width: 100%;
+  float: left;
   margin: 70px 140px;
   display: flex;
   flex-direction: column;
@@ -66,6 +67,7 @@ body {
   align-items: center;
 }
 .room .content .info {
+  width: 66.67%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -104,6 +106,7 @@ body {
   height: 120px;
   margin: 20px;
   border-radius: 50%;
+  background-color: red;
 }
 .room .content .opinion .opinion__graf .opinion__circle .opinion__area1 {
   display: block;
@@ -161,10 +164,12 @@ body {
 .room .content .comment {
   display: flex;
   flex-direction: column;
+  margin: 30px 140px 0px 140px;
 }
 .room .content .comment .comment__people {
   display: flex;
   flex-direction: row;
+  margin-bottom: 30px;
 }
 .room .content .comment .comment__people .comment__pict {
   display: flex;
@@ -194,16 +199,24 @@ body {
   box-shadow: 0 0 5px rgba(31, 32, 65, 0.25);
 }
 .room .content .comment .comment__people .comment__pict .comment__like .comment__value {
+  position: relative;
+  margin-left: 15px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 10px;
   line-height: 20px;
   color: rgba(31, 32, 65, 0.5);
 }
-.room .content .comment .comment__people .comment__pict .comment__like img.comment__like-pict {
+.room .content .comment .comment__people .comment__pict .comment__like .comment__value::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  display: block;
   width: 15px;
   height: 15px;
-  margin-right: 5px;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/3446/3446990.png);
+  background-size: cover;
 }
 .room .content .comment .comment__people .comment__pict .comment__like_active {
   display: flex;
@@ -220,22 +233,134 @@ body {
   box-shadow: 0 0 5px #bc9cff;
 }
 .room .content .comment .comment__people .comment__pict .comment__like_active .comment__value_active {
+  position: relative;
+  margin-left: 15px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 10px;
   line-height: 20px;
   color: #bc9cff;
 }
-.room .content .comment .comment__people .comment__pict .comment__like_active img.comment__like-pict_active {
+.room .content .comment .comment__people .comment__pict .comment__like_active .comment__value_active::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  display: block;
   width: 15px;
   height: 15px;
-  margin-right: 5px;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/5249/5249243.png);
+  background-size: cover;
 }
 .room .content .rule {
+  margin: 0px 140px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 66.6666%;
+}
+.room .content .rule .core li.core__li {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.menu-btn {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+  cursor: pointer;
+  z-index: 2;
+}
+.menu-btn .btn-arrow,
+.menu-btn .btn-arrow::before,
+.menu-btn .btn-arrow::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  transition: 0.5s;
+}
+.menu-btn .btn-arrow {
+  position: relative;
+  top: 23px;
+  left: 7.5px;
+}
+.menu-btn .btn-arrow::before {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+}
+.menu-btn .btn-arrow::after {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+
+.menu-btn_active {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+  cursor: pointer;
+  transform: scale(60%);
+  transition: 0.5s;
+  z-index: 2;
+}
+.menu-btn_active .btn-arrow_active,
+.menu-btn_active .btn-arrow_active::before,
+.menu-btn_active .btn-arrow_active::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  transition: 0.5s;
+}
+.menu-btn_active .btn-arrow_active {
+  position: relative;
+  top: 23px;
+  left: 7.5px;
+  height: 0px;
+  transition: 0s;
+}
+.menu-btn_active .btn-arrow_active::before {
+  position: absolute;
+  top: 0px;
+  transform: rotate(45deg);
+  background-color: white;
+}
+.menu-btn_active .btn-arrow_active::after {
+  position: absolute;
+  top: 0px;
+  transform: rotate(-45deg);
+  background-color: white;
+}
+
+.box {
+  position: fixed;
+  left: 5%;
+  bottom: 5%;
+  transform: scale(0);
+  transition: 0.5s;
+  transform-origin: left bottom;
+}
+
+.box_active {
+  position: fixed;
+  left: 5%;
+  bottom: 5%;
+  transform: scale(100%);
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=room.css.map */

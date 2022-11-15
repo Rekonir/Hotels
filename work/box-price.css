@@ -1,95 +1,78 @@
-.reg {
-  box-sizing: border-box;
-  margin-top: 70px;
-  margin-bottom: 383px;
-  padding: 40px 30px 30px 30px;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+.box-price {
+  padding: 30px;
+  width: 380px;
+  height: 512px;
+  border: 1px solid rgba(31, 32, 65, 0.15);
+  box-shadow: 0 0 25px rgba(31, 32, 65, 0.2);
+  background: white;
 }
 
-h1 {
+.box__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.box__text h1.box__name {
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
   font-weight: 700;
-  line-height: 29px;
-  letter-spacing: 0em;
-  text-align: left;
+  font-size: 24px;
+  line-height: 17px;
+  color: #1f2041;
+}
+.box__text p.box__type {
+  margin-right: 100px;
+  margin-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #bc9cff;
+}
+.box__text p.box__cost {
+  margin-right: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.box__text p.box__per-day {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
 }
 
-.reg__date {
-  box-sizing: border-box;
+.box__date {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
-.reg__date .reg__prib {
-  margin-right: 20px;
-}
-
-.reg__text {
+.box__date h2.box__subheader {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
-  color: #1f2041;
   text-transform: uppercase;
-  margin: 21px 0px 6px 0px;
+  color: #1f2041;
 }
-
-.reg__date-input {
-  box-sizing: border-box;
+.box__date input.date[type=date] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
   width: 150px;
   height: 44px;
-  padding: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
-  text-decoration: rgba(31, 32, 65, 0.75);
-  border: 1px solid rgba(111, 207, 151, 0.25);
+  border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
 }
-
-.gosty {
-  position: relative;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-  text-decoration: rgba(31, 32, 65, 0.25);
-  width: 100%;
-  border: 1px solid rgba(111, 207, 151, 0.25);
-}
-
-.bottom-reg {
-  display: flex;
-  background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
-  border-radius: 22px;
-  color: white;
-  margin: 30px 0px;
-  width: 100%;
-}
-.bottom-reg p {
-  font-family: "Montserrat", sans-serif;
-  margin: auto;
-  padding: 9px 20px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 15px;
-  letter-spacing: 0em;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-input.date-reg[type=date]::-webkit-calendar-picker-indicator {
+.box__date input.date[type=date]::-webkit-calendar-picker-indicator {
   background-image: url(/file/calendar.png);
   width: 20px;
   height: 20px;
@@ -100,6 +83,7 @@ input.gosty[type=text] {
   box-sizing: border-box;
   padding: 10px;
   border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
 }
 
 .gosty__drop {
@@ -122,6 +106,7 @@ input.gosty[type=text] {
   z-index: 1;
 }
 .gosty__drop .gosty__drop-schet {
+  visibility: hidden;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -154,4 +139,4 @@ input.gosty[type=text] {
   padding: 0px;
 }
 
-/*# sourceMappingURL=reg-box.css.map */
+/*# sourceMappingURL=box-price.css.map */

@@ -6,6 +6,7 @@ html(lang="ru")
     title Room details
     link(rel="icon", href="../file/icon.png", type="image/x-icon")
     link(rel="stylesheet", href="Room.css")
+    //script(src="jQ.js")
   body
     header
       include Header.pug
@@ -57,13 +58,20 @@ html(lang="ru")
             .comment__pict
               img.comment__avatar(src="https://cdn-icons-png.flaticon.com/512/5046/5046928.png", alt="Нет аватарки")
               .comment__like 
-                img.comment__like-pict(src="https://cdn-icons-png.flaticon.com/512/3446/3446990.png", alt="Нет лайка")
                 p.comment__value 23
             .comment__content
               h3.comment__name Мурад Сарафанов
               p.comment__date 5 дней назад
               p.comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
-            
+          .comment__people
+            .comment__pict
+              img.comment__avatar(src="https://cdn-icons-png.flaticon.com/512/8326/8326712.png", alt="Нет аватарки")
+              .comment__like 
+                p.comment__value 15
+            .comment__content
+              h3.comment__name Патрисия Стёклышкова
+              p.comment__date 15 дней назад
+              p.comment__text Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.
         .rule
           .core
             h2.core__header Правила
@@ -77,7 +85,10 @@ html(lang="ru")
           .cancel
             h2.cancel__header Отмена
             p.cancel__text Бесплатная отмена в течение 48 ч. После <br> этого при отмене не позднее чем за 5 дн. до <br> прибытия вы получите полный возврат за <br> вычетом сбора за услуги.
-    
+      .menu-btn
+        .btn-arrow
+      .box
+        include box-price.pug
     script(src="room.js")
     footer
       include Footer.pug
