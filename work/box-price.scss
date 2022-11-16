@@ -11,12 +11,30 @@ $shrift: "Montserrat", sans-serif;
     border: 1px solid rgba($styleDark, 0.15);
     box-shadow: 0 0 25px rgba($styleDark, 0.2);
     background: white;
+    h2 {
+        text-align: left;
+        font-family: $shrift;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $styleDark;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    p {
+        font-family: $shrift;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba($styleDark, 0.5);
+    }
 }
 .box__text {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 20px;
     h1.box__name {
         font-family: $shrift;
@@ -27,28 +45,11 @@ $shrift: "Montserrat", sans-serif;
     }
     p.box__type {
         margin-right: 100px;
-        margin-left: 10px;
-        font-family: $shrift;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
         color: $stylePur;
     }
     p.box__cost {
-        margin-right: 10px;
-        font-family: $shrift;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 18px;
-        color: rgba($styleDark, 0.75);
-    }
-    p.box__per-day {
-        font-family: $shrift;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 18px;
-        color: rgba($styleDark, 0.5);
+        margin: 0;
+        color: $styleDark;
     }
 }
 .box__date {
@@ -56,14 +57,6 @@ $shrift: "Montserrat", sans-serif;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    h2.box__subheader {
-        font-family: $shrift;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
-        text-transform: uppercase;
-        color: $styleDark;
-    }
     input.date[type="date"] {
         font-family: $shrift;
         font-weight: 400;
@@ -74,6 +67,7 @@ $shrift: "Montserrat", sans-serif;
         height: 44px;
         border: 1px solid rgba($styleDark, 0.25);
         border-radius: 4px;
+        padding: 0px 15px;
     }
     input.date[type="date"]::-webkit-calendar-picker-indicator {
         background-image: url(/file/calendar.png);
@@ -82,60 +76,182 @@ $shrift: "Montserrat", sans-serif;
         margin: 0px;
     }
 }
-input.gosty[type="text"] {
-    box-sizing: border-box;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid rgba($styleDark, 0.25);
-}
-.gosty__drop {
-    box-sizing: border-box;
-    position: absolute;
-    background: white;
-    width: 318px;
-    display: none;
-    flex-direction: column;
-    border: 1px solid rgba($styleDark, 0.5);
-    box-shadow: 0px 10px 20px rgba($styleDark, 0.05);
-    font-family: $shrift;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    color: $styleDark;
-    text-transform: uppercase;
-    padding: 10px;
-    margin: 5px 0px;
-    z-index: 1;
-    .gosty__drop-schet {
+.box__gosty {
+    margin-top: 20px;
+    h2.box__gosty-text {
+        text-align: left;
+    }
+    .gosty {
+        font-family: $shrift;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 40px;
+        color: rgba($styleDark, 0.75);
+        box-sizing: border-box;
+        width: 100%;
+        height: 44px;
+        border: 1px solid rgba($styleDark, 0.25);
+        border-radius: 4px;
+        padding-left: 15px;
+        cursor: pointer;
+    }
+    .gosty__drop {
         visibility: hidden;
         box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 7px 0px;
-        h2{
-        margin: 0px;}
+        position: absolute;
+        top: 250px;
+        z-index: 2;
+        background: white;
+        width: 86%;
+        height: 100px;
+        flex-direction: column;
+        border: 1px solid rgba($styleDark, 0.25);
+        border-radius: 4px;
+        box-shadow: 0px 10px 20px rgba($styleDark, 0.05);
+        font-family: $shrift;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        color: $styleDark;
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 5px 0px;
+        transform: scale(0);
+        transition: 0.2s;
+        transform-origin: top;
+    }
+    .gosty__drop_active {
+        visibility: visible;
+        transform: scale(1);
+        transition: 0.2s;
     }
 }
-.schet {
+.gosty__drop-schet {
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    .minus {
-        width: 30px;
-        height: 30px;
-        margin: 0px 16px;
-        padding: 0px;
+    margin: 7px 0px;
+    h2 {
+        margin: 0px;
     }
-    .itog{
+    .schet {
+        box-sizing: border-box;
         display: flex;
-        width: 12px;
-
+        align-items: center;
+        img.minus {
+            width: 30px;
+            height: 30px;
+            margin: 0px 16px;
+            padding: 0px;
+        }
+        .itog {
+            display: flex;
+            width: 12px;
+        }
+        .plus {
+            width: 30px;
+            height: 30px;
+            margin: 0px 16px;
+            padding: 0px;
+        }
     }
-    .plus {
-        width: 30px;
-        height: 30px;
-        margin: 0px 16px;
-        padding: 0px;
+}
+
+.box__price {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0px 30px 0px;
+    .box__price-str {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 5px;
+        p.box__price-left {
+            min-width: 220px;
+            max-width: 220px;
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba($styleDark, 0.75);
+        }
+        p.box__price-right {
+            text-align: right;
+            min-width: 60px;
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba($styleDark, 0.75);
+        }
+        .box__price-info {
+            display: block;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba($styleDark, 0.25);
+            border-radius: 50%;
+            text-align: center;
+            color: rgba($styleDark, 0.25);
+            cursor: pointer;
+            .box__info {
+                visibility: hidden;
+                position: absolute;
+                z-index: 3;
+                bottom: 10px;
+                left: 10px;
+                width: 150px;
+                padding: 10px;
+                text-align: center;
+                background: white;
+                font-family: $shrift;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                color: rgba($styleDark, 0.75);
+                border: 1px solid rgba($styleDark, 0.25);
+                box-shadow: 0 0 10px rgba($styleDark, 0.2);
+                transform-origin: bottom left;
+                transform: scale(0%);
+                transition: 0.2s;
+            }
+        }
+
+        .box__price-info:hover {
+            .box__info {
+                visibility: visible;
+                transform: scale(100%);
+                transition: 0.2s;
+            }
+        }
+    }
+    .box__itog {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        margin: 30px 0px;
+        .box__itog-text {
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 23px;
+            color: $styleDark;
+        }
+        .box__itop-pointer {
+            display: block;
+            width: 230px;
+            height: 1px;
+            border-bottom: 1px dashed rgba($styleDark, 0.25);
+        }
     }
 }

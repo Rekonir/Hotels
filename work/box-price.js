@@ -1,14 +1,12 @@
+var input = document.getElementsByClassName('gosty')[0]
 var drop = document.getElementsByClassName('gosty__drop')[0]
-var inp = document.getElementsByClassName('gosty')[0]
-inp.onclick = (event) => {
-    if (drop.style.display === "none") {
-        drop.style.display = "flex"
-    }
-    else {
-        drop.style.display = "none"
-    }
-}
 
+console.dir(drop)
+
+input.onclick = event => {
+    drop.classList.toggle('gosty__drop_active')
+    console.dir(drop)
+}
 const mvzr = document.getElementById('mvzr')
 var vzr = Number(document.getElementById('vzr').textContent)
 const pvzr = document.getElementById('pvzr')
@@ -72,12 +70,4 @@ dropG.onclick = (event) => {
     }
 
 
-}
-
-var input = document.getElementsByClassName('box__gosty')[0]
-var box = document.getElementsByClassName('box__drop')[0]
-
-input.onclick = event => {
-    box.classList.toggle('box__drop_active')
-    console.log(box.classList)
 }

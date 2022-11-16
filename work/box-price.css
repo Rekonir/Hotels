@@ -6,12 +6,30 @@
   box-shadow: 0 0 25px rgba(31, 32, 65, 0.2);
   background: white;
 }
+.box-price h2 {
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.box-price p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
 
 .box__text {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 20px;
 }
 .box__text h1.box__name {
@@ -23,28 +41,11 @@
 }
 .box__text p.box__type {
   margin-right: 100px;
-  margin-left: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
   color: #bc9cff;
 }
 .box__text p.box__cost {
-  margin-right: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-}
-.box__text p.box__per-day {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.5);
+  margin: 0;
+  color: #1f2041;
 }
 
 .box__date {
@@ -52,14 +53,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-.box__date h2.box__subheader {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1f2041;
 }
 .box__date input.date[type=date] {
   font-family: "Montserrat", sans-serif;
@@ -71,6 +64,7 @@
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
+  padding: 0px 15px;
 }
 .box__date input.date[type=date]::-webkit-calendar-picker-indicator {
   background-image: url(/file/calendar.png);
@@ -79,21 +73,38 @@
   margin: 0px;
 }
 
-input.gosty[type=text] {
-  box-sizing: border-box;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+.box__gosty {
+  margin-top: 20px;
 }
-
-.gosty__drop {
+.box__gosty h2.box__gosty-text {
+  text-align: left;
+}
+.box__gosty .gosty {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 40px;
+  color: rgba(31, 32, 65, 0.75);
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.box__gosty .gosty__drop {
+  visibility: hidden;
   box-sizing: border-box;
   position: absolute;
+  top: 250px;
+  z-index: 2;
   background: white;
-  width: 318px;
-  display: none;
+  width: 86%;
+  height: 100px;
   flex-direction: column;
-  border: 1px solid rgba(31, 32, 65, 0.5);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -103,40 +114,141 @@ input.gosty[type=text] {
   text-transform: uppercase;
   padding: 10px;
   margin: 5px 0px;
-  z-index: 1;
+  transform: scale(0);
+  transition: 0.2s;
+  transform-origin: top;
 }
-.gosty__drop .gosty__drop-schet {
-  visibility: hidden;
+.box__gosty .gosty__drop_active {
+  visibility: visible;
+  transform: scale(1);
+  transition: 0.2s;
+}
+
+.gosty__drop-schet {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 7px 0px;
 }
-.gosty__drop .gosty__drop-schet h2 {
+.gosty__drop-schet h2 {
   margin: 0px;
 }
-
-.schet {
+.gosty__drop-schet .schet {
   box-sizing: border-box;
   display: flex;
   align-items: center;
 }
-.schet .minus {
+.gosty__drop-schet .schet img.minus {
   width: 30px;
   height: 30px;
   margin: 0px 16px;
   padding: 0px;
 }
-.schet .itog {
+.gosty__drop-schet .schet .itog {
   display: flex;
   width: 12px;
 }
-.schet .plus {
+.gosty__drop-schet .schet .plus {
   width: 30px;
   height: 30px;
   margin: 0px 16px;
   padding: 0px;
+}
+
+.box__price {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px 0px 30px 0px;
+}
+.box__price .box__price-str {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5px;
+}
+.box__price .box__price-str p.box__price-left {
+  min-width: 220px;
+  max-width: 220px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.box__price .box__price-str p.box__price-right {
+  text-align: right;
+  min-width: 60px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.box__price .box__price-str .box__price-info {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.25);
+  cursor: pointer;
+}
+.box__price .box__price-str .box__price-info .box__info {
+  visibility: hidden;
+  position: absolute;
+  z-index: 3;
+  bottom: 10px;
+  left: 10px;
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0 0 10px rgba(31, 32, 65, 0.2);
+  transform-origin: bottom left;
+  transform: scale(0%);
+  transition: 0.2s;
+}
+.box__price .box__price-str .box__price-info:hover .box__info {
+  visibility: visible;
+  transform: scale(100%);
+  transition: 0.2s;
+}
+.box__price .box__itog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 30px 0px;
+}
+.box__price .box__itog .box__itog-text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+.box__price .box__itog .box__itop-pointer {
+  display: block;
+  width: 230px;
+  height: 1px;
+  border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
 }
 
 /*# sourceMappingURL=box-price.css.map */
