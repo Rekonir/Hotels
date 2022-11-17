@@ -103,7 +103,6 @@ $shrift: "Montserrat", sans-serif;
         z-index: 2;
         background: white;
         width: 86%;
-        height: 100px;
         flex-direction: column;
         border: 1px solid rgba($styleDark, 0.25);
         border-radius: 4px;
@@ -135,26 +134,26 @@ $shrift: "Montserrat", sans-serif;
     h2 {
         margin: 0px;
     }
-    .schet {
-        box-sizing: border-box;
+}
+.schet {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    .minus {
+        width: 30px;
+        height: 30px;
+        margin: 0px 16px;
+        padding: 0px;
+    }
+    .itog {
         display: flex;
-        align-items: center;
-        img.minus {
-            width: 30px;
-            height: 30px;
-            margin: 0px 16px;
-            padding: 0px;
-        }
-        .itog {
-            display: flex;
-            width: 12px;
-        }
-        .plus {
-            width: 30px;
-            height: 30px;
-            margin: 0px 16px;
-            padding: 0px;
-        }
+        width: 12px;
+    }
+    .plus {
+        width: 30px;
+        height: 30px;
+        margin: 0px 16px;
+        padding: 0px;
     }
 }
 

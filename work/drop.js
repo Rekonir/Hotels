@@ -73,11 +73,3 @@ dropG.onclick = (event) => {
 
 
 }
-
-var input = document.getElementsByClassName('box__gosty')[0]
-var box = document.getElementsByClassName('box__drop')[0]
-
-input.onclick = event => {
-    box.classList.toggle('box__drop_active')
-    console.log(box.classList)
-}

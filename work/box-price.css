@@ -101,7 +101,6 @@
   z-index: 2;
   background: white;
   width: 86%;
-  height: 100px;
   flex-direction: column;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -134,22 +133,23 @@
 .gosty__drop-schet h2 {
   margin: 0px;
 }
-.gosty__drop-schet .schet {
+
+.schet {
   box-sizing: border-box;
   display: flex;
   align-items: center;
 }
-.gosty__drop-schet .schet img.minus {
+.schet .minus {
   width: 30px;
   height: 30px;
   margin: 0px 16px;
   padding: 0px;
 }
-.gosty__drop-schet .schet .itog {
+.schet .itog {
   display: flex;
   width: 12px;
 }
-.gosty__drop-schet .schet .plus {
+.schet .plus {
   width: 30px;
   height: 30px;
   margin: 0px 16px;

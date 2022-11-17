@@ -101,29 +101,74 @@ body {
 }
 .room .content .opinion .opinion__graf .opinion__circle {
   position: relative;
-  display: block;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 120px;
   height: 120px;
-  margin: 20px;
+  margin: 0px 20px;
   border-radius: 50%;
-  background-color: red;
+  background: conic-gradient(#ffe39c 0% 50%, #6fcf97 50% 75%, #bc9cff 75% 95%, #919191 95% 100%);
 }
-.room .content .opinion .opinion__graf .opinion__circle .opinion__area1 {
-  display: block;
+.room .content .opinion .opinion__graf .opinion__circle .opinion__white,
+.room .content .opinion .opinion__graf .opinion__circle .opinion__orange,
+.room .content .opinion .opinion__graf .opinion__circle .opinion__green,
+.room .content .opinion .opinion__graf .opinion__circle .opinion__pur,
+.room .content .opinion .opinion__graf .opinion__circle .opinion__black {
   position: absolute;
-  top: 60px;
-  left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+  box-shadow: 0 0 5px rgba(31, 32, 65, 0.25);
 }
-.room .content .opinion .opinion__graf .opinion__circle .opinion__area2 {
-  background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+.room .content .opinion .opinion__graf .opinion__circle .opinion__white {
+  width: 85%;
+  height: 85%;
+  background: white;
 }
-.room .content .opinion .opinion__graf .opinion__circle .opinion__area3 {
-  background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+.room .content .opinion .opinion__graf .opinion__circle .opinion__white .opinion__inner {
+  opacity: 0;
+  color: #1f2041;
+  transition: 1s;
 }
-.room .content .opinion .opinion__graf .opinion__circle .opinion__area4 {
-  background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+.room .content .opinion .opinion__graf .opinion__circle .opinion__orange .opinion__inner {
+  opacity: 0;
+  color: #ffc49c;
+  transition: 1s;
+}
+.room .content .opinion .opinion__graf .opinion__circle .opinion__green .opinion__inner {
+  opacity: 0;
+  color: #6fcf97;
+  transition: 1s;
+}
+.room .content .opinion .opinion__graf .opinion__circle .opinion__pur .opinion__inner {
+  opacity: 0;
+  color: #bc9cff;
+  transition: 1s;
+}
+.room .content .opinion .opinion__graf .opinion__circle .opinion__black .opinion__inner {
+  opacity: 0;
+  color: #919191;
+  transition: 1s;
+}
+.room .content .opinion .opinion__graf .opinion__circle .opinion__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-style: normal;
+  margin: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  height: 100%;
+  text-shadow: 0 0 1px #1f2041;
+  text-transform: uppercase;
 }
 .room .content .opinion .opinion__graf .opinion__legends .opinion__text1::before {
   display: inline-block;
@@ -347,6 +392,7 @@ body {
 }
 
 .box {
+  visibility: hidden;
   position: fixed;
   left: 5%;
   bottom: 5%;
@@ -356,6 +402,7 @@ body {
 }
 
 .box_active {
+  visibility: visible;
   position: fixed;
   left: 5%;
   bottom: 5%;

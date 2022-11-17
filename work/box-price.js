@@ -1,11 +1,9 @@
 var input = document.getElementsByClassName('gosty')[0]
 var drop = document.getElementsByClassName('gosty__drop')[0]
 
-console.dir(drop)
 
 input.onclick = event => {
     drop.classList.toggle('gosty__drop_active')
-    console.dir(drop)
 }
 const mvzr = document.getElementById('mvzr')
 var vzr = Number(document.getElementById('vzr').textContent)
@@ -60,14 +58,14 @@ pbaby.onclick = (event) => {
 
 var gosty = document.getElementsByClassName('gosty')[0]
 const dropG = document.querySelector('.gosty__drop')
-
 dropG.onclick = (event) => {
-    if (vzr || dety > 0, baby==0) {
-        gosty.placeholder = `Количество спальных мест: ${vzr+dety}`
+    if (baby == 0) {
+        gosty.innerHTML = `Планируется гостей: ${vzr + dety}`
     }
-    else if (vzr || dety > 0, baby>0) {
-        gosty.placeholder = `Количество спальных мест: ${vzr+dety} и люлек: ${baby}`
+    else if (vzr || dety > 0) {
+        gosty.innerHTML = `Планируется гостей: ${vzr + dety} и детей: ${baby}`
     }
-
-
+    else {
+        gosty.innerHTML = `Гости`
+    }
 }
