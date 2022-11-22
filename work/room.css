@@ -210,6 +210,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 30px 140px 0px 140px;
+  width: 66.66666667%;
 }
 .room .content .comment .comment__people {
   display: flex;
@@ -242,6 +243,7 @@ body {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 20px;
   box-shadow: 0 0 5px rgba(31, 32, 65, 0.25);
+  cursor: pointer;
 }
 .room .content .comment .comment__people .comment__pict .comment__like .comment__value {
   position: relative;

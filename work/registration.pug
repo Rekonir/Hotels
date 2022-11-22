@@ -1,0 +1,23 @@
+link(rel="stylesheet", href="registration.css")
+body
+  .registration
+    h1.registration__header Регистарция аккаунта
+    .registration__FIO
+      input.1name(type="text", placeholder="Имя", title="Укажите свое имя")
+      input.2name(type="text", placeholder="Фамилия", title="Укажите свою фамилию")
+      .gender
+        label.gender__choose(for="boy") Мужчина
+        label.gender__choose(for="girl") Женщина
+        input.gender__choose#boy(type="radio", name="gender", value="value")         
+        input.gender__choose#girl(type="radio", name="gender", value="value")
+    .registration__bday
+      h2.bday__subheader День рождения
+      input.bday__date(type="date", placeholder="ДД.ММ.ГГГГ", title="Укажите свою дату рождения")
+    .registration__login
+      h2.lodin__subheader данные для входа в сервис
+      input.reg__email(type="email", placeholder="Email", title="Укажите свою электронную почту")
+      input.reg__password(type="password", placeholder="Пароль", title="Укажите свой пароль")
+      input.reg__spam#spam(type="checkbox", name="spam")
+      label(for="spam") Получать спецпредложения
+    .registration__btn
+    .registration__already

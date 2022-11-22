@@ -67,7 +67,7 @@ var Pr3 = Sum3 / Sum0 * 100
 var Sum4 = 2
 var Pr4 = Sum4 / Sum0 * 100
 
-OpText[0].innerHTML = `отзывов: ${Sum0}`
+OpText[0].innerHTML = `Всего отзывов: ${Sum0}`
 OpText[1].innerHTML = `отзывов: ${Sum1}`
 OpText[2].innerHTML = `отзывов: ${Sum2}`
 OpText[3].innerHTML = `отзывов: ${Sum3}`

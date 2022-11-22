@@ -1,0 +1,119 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 30px 30px 30px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+.registration h1.registration__header {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+.registration h2 {
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+.registration input {
+  width: 100%;
+  height: 44px;
+  padding: 13px 15px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1f2041;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+.registration input::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+.registration .registration__FIO {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.registration .registration__FIO .gender {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  gap: 50px;
+  margin-left: 60px;
+}
+.registration .registration__FIO .gender input.gender__choose[type=radio] {
+  visibility: hidden;
+  padding-left: 30px;
+}
+.registration .registration__FIO .gender label.gender__choose {
+  position: relative;
+}
+.registration .registration__FIO .gender label.gender__choose::before {
+  position: absolute;
+  left: -30px;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+}
+.registration .registration__FIO .gender input.gender__choose:checked + label.gender__choose::before {
+  background: #bc9cff;
+  border: 1px solid #bc9cff;
+  box-shadow: 0 0 0px 4px white inset;
+  transition: 0.2s;
+}
+.registration .registration__bday {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  margin: 20px 0px;
+}
+.registration .registration__bday input.bday__date[type=date]::-webkit-calendar-picker-indicator {
+  background-image: url(/file/calendar.png);
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+}
+.registration .registration__login {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin: 20px 0px;
+}
+.registration .registration__login label {
+  display: block;
+}
+
+/*# sourceMappingURL=registration.css.map */

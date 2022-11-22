@@ -1,0 +1,125 @@
+$styleDark: #1f2041;
+$stylePur: #bc9cff;
+$styleGr: #6fcf97;
+$grad: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+$shrift: "Montserrat", sans-serif;
+
+.registration {
+    h1.registration__header {
+        font-family: $shrift;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: $styleDark;
+    }
+    h2 {
+        text-align: left;
+        font-family: $shrift;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $styleDark;
+    }
+    input{
+        width: 100%;
+        height: 44px;
+        padding: 13px 15px;
+        text-align: left;
+        font-family: $shrift;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba($styleDark, 1);
+        border: 1px solid rgba($styleDark, 0.25);
+        border-radius: 4px;
+    }
+    input::placeholder {
+        color: rgba($styleDark, 0.25);
+
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px 30px 30px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    .registration__FIO {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        .gender {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: flex-start;
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba($styleDark, 0.75);
+            gap: 50px;
+            margin-left: 60px;
+            input.gender__choose[type="radio"] {
+                visibility: hidden;
+                padding-left: 30px;
+            }
+            label.gender__choose {
+                position: relative;
+            }
+            label.gender__choose::before {
+                position: absolute;
+                left: -30px;
+                content: "";
+                display: block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid rgba($styleDark, 0.25);
+                border-radius: 50%;
+            }
+            input.gender__choose:checked + label.gender__choose::before {
+                background: $stylePur;
+                border: 1px solid $stylePur;
+                box-shadow: 0 0 0px 4px white inset;
+                transition: 0.2s;
+            }
+        }
+    }
+    .registration__bday {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        margin: 20px 0px;
+        input.bday__date[type="date"]::-webkit-calendar-picker-indicator {
+            background-image: url(/file/calendar.png);
+            width: 20px;
+            height: 20px;
+            margin: 0px;
+        }
+    }
+    .registration__login{        
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin: 20px 0px;
+        label{
+            display: block;
+
+        }
+    }
+}

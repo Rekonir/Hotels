@@ -162,7 +162,7 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin: 20px 0px 30px 0px;
+  margin: 20px 0px 0px 0px;
 }
 .box__price .box__price-str {
   display: flex;
@@ -249,6 +249,67 @@
   width: 230px;
   height: 1px;
   border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+}
+
+.box__btn {
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  padding: 15px;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 22px;
+  background: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+  box-shadow: 0 0 5px rgba(31, 32, 65, 0.25);
+  text-decoration: none;
+  gap: 33%;
+}
+.box__btn p.btn {
+  display: block;
+  width: 100px;
+  height: 44px;
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.box__btn .box__arrow,
+.box__btn .box__arrow::before,
+.box__btn .box__arrow::after {
+  display: block;
+  background: white;
+  width: 20px;
+  height: 4px;
+  border-radius: 4px;
+  transform-origin: right;
+  content: "";
+}
+.box__btn .box__arrow {
+  position: relative;
+}
+.box__btn .box__arrow::before {
+  position: absolute;
+  top: 1px;
+  transform: rotate(45deg);
+}
+.box__btn .box__arrow::after {
+  position: absolute;
+  top: -1px;
+  transform: rotate(-45deg);
+}
+
+.box__btn:active {
+  box-shadow: 0 0 10px rgba(111, 207, 151, 0.75);
+}
+.box__btn:active .box__arrow {
+  transform: translateX(5px);
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=box-price.css.map */
