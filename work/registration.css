@@ -1,4 +1,5 @@
 .registration {
+  width: 380px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,8 +8,12 @@
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  gap: 20px;
+  transform: scale(0);
+  visibility: hidden;
+  transition: 0.5s;
 }
-.registration h1.registration__header {
+.registration h1 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -63,17 +68,20 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
   gap: 50px;
-  margin-left: 60px;
 }
 .registration .registration__FIO .gender input.gender__choose[type=radio] {
   visibility: hidden;
-  padding-left: 30px;
+  width: 0;
+  height: 0;
+  position: absolute;
 }
 .registration .registration__FIO .gender label.gender__choose {
   position: relative;
+  padding-left: 30px;
 }
 .registration .registration__FIO .gender label.gender__choose::before {
   position: absolute;
+  margin-left: 30px;
   left: -30px;
   content: "";
   display: block;
@@ -95,7 +103,6 @@
   flex-direction: column;
   gap: 5px;
   width: 100%;
-  margin: 20px 0px;
 }
 .registration .registration__bday input.bday__date[type=date]::-webkit-calendar-picker-indicator {
   background-image: url(/file/calendar.png);
@@ -110,10 +117,285 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  margin: 20px 0px;
 }
-.registration .registration__login label {
+.registration .registration__login input.reg__spam[type=checkbox] {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+.registration .registration__login label.spam {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 50px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.registration .registration__login label.spam::before {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0px;
+  top: 0px;
   display: block;
+  content: "";
+  width: 40px;
+  height: 20px;
+  padding: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 20px;
+  background: white;
+  transition: 0.2s;
+}
+.registration .registration__login label.spam::after {
+  box-sizing: border-box;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(31, 32, 65, 0.25);
+  transition: 0.2s;
+}
+.registration .registration__login input.reg__spam[type=checkbox]:checked + label.spam::before {
+  border: 1px solid #bc9cff;
+}
+.registration .registration__login input.reg__spam[type=checkbox]:checked + label.spam::after {
+  transform: translateX(20px);
+  background: #bc9cff;
+}
+.registration .registration__btn {
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  border-radius: 22px;
+  background-image: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 20px;
+}
+.registration .registration__btn a.btn__text {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  margin-right: auto;
+  margin-left: auto;
+}
+.registration .registration__btn .btn__arrow,
+.registration .registration__btn .btn__arrow::before,
+.registration .registration__btn .btn__arrow::after {
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  transform-origin: right;
+  float: right;
+}
+.registration .registration__btn .btn__arrow {
+  width: 20px;
+  position: relative;
+}
+.registration .registration__btn .btn__arrow::before {
+  position: absolute;
+  width: 15px;
+  left: 5px;
+  top: 1px;
+  transform: rotate(45deg);
+}
+.registration .registration__btn .btn__arrow::after {
+  position: absolute;
+  width: 15px;
+  left: 5px;
+  top: -1px;
+  transform: rotate(-45deg);
+}
+.registration .registration__already {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.registration .registration__already p.already__text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1f2041;
+}
+.registration .registration__already a.btn__already {
+  text-decoration: none;
+  display: block;
+  width: 99px;
+  height: 44px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #bc9cff;
+  border: 1px solid #bc9cff;
+  border-radius: 22px;
+}
+
+.registration_active {
+  transform: scale(1);
+  visibility: visible;
+  transition: 0.5s;
+}
+
+.login__box {
+  position: absolute;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 30px 30px 30px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  gap: 20px;
+  transform: scale(0);
+  visibility: hidden;
+  transition: 0.5s;
+}
+.login__box h1 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+.login__box input {
+  width: 100%;
+  height: 44px;
+  padding: 13px 15px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1f2041;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+.login__box input::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+.login__box .login__login {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.login__box .login__btn {
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  border-radius: 22px;
+  background-image: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 20px;
+}
+.login__box .login__btn a.btn__text {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  margin-right: auto;
+  margin-left: auto;
+}
+.login__box .login__btn .btn__arrow,
+.login__box .login__btn .btn__arrow::before,
+.login__box .login__btn .btn__arrow::after {
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  transform-origin: right;
+  float: right;
+}
+.login__box .login__btn .btn__arrow {
+  width: 20px;
+  position: relative;
+}
+.login__box .login__btn .btn__arrow::before {
+  position: absolute;
+  width: 15px;
+  left: 5px;
+  top: 1px;
+  transform: rotate(45deg);
+}
+.login__box .login__btn .btn__arrow::after {
+  position: absolute;
+  width: 15px;
+  left: 5px;
+  top: -1px;
+  transform: rotate(-45deg);
+}
+.login__box .login__not {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login__box .login__not p.not__text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1f2041;
+}
+.login__box .login__not a.btn__not {
+  text-decoration: none;
+  display: block;
+  width: 99px;
+  height: 44px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #bc9cff;
+  border: 1px solid #bc9cff;
+  border-radius: 22px;
+}
+
+.login__box_active {
+  transform: scale(1);
+  visibility: visible;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=registration.css.map */

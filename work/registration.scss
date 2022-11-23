@@ -5,7 +5,20 @@ $grad: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
 $shrift: "Montserrat", sans-serif;
 
 .registration {
-    h1.registration__header {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px 30px 30px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+    transform: scale(0);
+    visibility: hidden;
+    transition: 0.5s;
+    h1 {
         font-family: $shrift;
         font-style: normal;
         font-weight: 700;
@@ -23,7 +36,7 @@ $shrift: "Montserrat", sans-serif;
         text-transform: uppercase;
         color: $styleDark;
     }
-    input{
+    input {
         width: 100%;
         height: 44px;
         padding: 13px 15px;
@@ -39,16 +52,8 @@ $shrift: "Montserrat", sans-serif;
     }
     input::placeholder {
         color: rgba($styleDark, 0.25);
-
     }
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 30px 30px 30px;
-    background: white;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+
     .registration__FIO {
         width: 100%;
         display: flex;
@@ -68,16 +73,19 @@ $shrift: "Montserrat", sans-serif;
             line-height: 24px;
             color: rgba($styleDark, 0.75);
             gap: 50px;
-            margin-left: 60px;
             input.gender__choose[type="radio"] {
                 visibility: hidden;
-                padding-left: 30px;
+                width: 0;
+                height: 0;
+                position: absolute;
             }
             label.gender__choose {
                 position: relative;
+                padding-left: 30px;
             }
             label.gender__choose::before {
                 position: absolute;
+                margin-left: 30px;
                 left: -30px;
                 content: "";
                 display: block;
@@ -101,7 +109,6 @@ $shrift: "Montserrat", sans-serif;
         flex-direction: column;
         gap: 5px;
         width: 100%;
-        margin: 20px 0px;
         input.bday__date[type="date"]::-webkit-calendar-picker-indicator {
             background-image: url(/file/calendar.png);
             width: 20px;
@@ -109,17 +116,290 @@ $shrift: "Montserrat", sans-serif;
             margin: 0px;
         }
     }
-    .registration__login{        
+    .registration__login {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
         gap: 10px;
         width: 100%;
-        margin: 20px 0px;
-        label{
+        input.reg__spam[type="checkbox"] {
+            visibility: hidden;
+            width: 0px;
+            height: 0px;
+        }
+        label.spam {
+            position: relative;
+            box-sizing: border-box;
+            padding-left: 50px;
+            cursor: pointer;
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        label.spam::before {
+            box-sizing: border-box;
+            position: absolute;
+            left: 0px;
+            top: 0px;
             display: block;
-
+            content: "";
+            width: 40px;
+            height: 20px;
+            padding: 4px;
+            border: 1px solid rgba($styleDark, 0.25);
+            border-radius: 20px;
+            background: white;
+            transition: 0.2s;
+        }
+        label.spam::after {
+            box-sizing: border-box;
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            display: block;
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba($styleDark, 0.25);
+            transition: 0.2s;
+        }
+        input.reg__spam[type="checkbox"]:checked + label.spam::before {
+            border: 1px solid $stylePur;
+        }
+        input.reg__spam[type="checkbox"]:checked + label.spam::after {
+            transform: translateX(20px);
+            background: $stylePur;
         }
     }
+    .registration__btn {
+        box-sizing: border-box;
+        width: 100%;
+        height: 44px;
+        border-radius: 22px;
+        background-image: $grad;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 15px 20px;
+        a.btn__text {
+            text-decoration: none;
+            color: white;
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .btn__arrow,
+        .btn__arrow::before,
+        .btn__arrow::after {
+            content: "";
+            display: block;
+            height: 4px;
+            border-radius: 4px;
+            background-color: white;
+            transform-origin: right;
+            float: right;
+        }
+        .btn__arrow {
+            width: 20px;
+            position: relative;
+        }
+        .btn__arrow::before {
+            position: absolute;
+            width: 15px;
+            left: 5px;
+            top: 1px;
+            transform: rotate(45deg);
+        }
+        .btn__arrow::after {
+            position: absolute;
+            width: 15px;
+            left: 5px;
+            top: -1px;
+            transform: rotate(-45deg);
+        }
+    }
+    .registration__already {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p.already__text {
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: $styleDark;
+        }
+        a.btn__already {
+            text-decoration: none;
+            display: block;
+            width: 99px;
+            height: 44px;
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 44px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $stylePur;
+            border: 1px solid $stylePur;
+            border-radius: 22px;
+        }
+    }
+}
+.registration_active {
+    transform: scale(1);
+    visibility: visible;
+    transition: 0.5s;
+}
+
+.login__box {
+    position: absolute;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px 30px 30px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+    transform: scale(0);
+    visibility: hidden;
+    transition: 0.5s;
+    h1 {
+        font-family: $shrift;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: $styleDark;
+    }
+    input {
+        width: 100%;
+        height: 44px;
+        padding: 13px 15px;
+        text-align: left;
+        font-family: $shrift;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba($styleDark, 1);
+        border: 1px solid rgba($styleDark, 0.25);
+        border-radius: 4px;
+    }
+    input::placeholder {
+        color: rgba($styleDark, 0.25);
+    }
+    .login__login {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        
+    }
+    .login__btn {
+        box-sizing: border-box;
+        width: 100%;
+        height: 44px;
+        border-radius: 22px;
+        background-image: $grad;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 15px 20px;
+        a.btn__text {
+            text-decoration: none;
+            color: white;
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .btn__arrow,
+        .btn__arrow::before,
+        .btn__arrow::after {
+            content: "";
+            display: block;
+            height: 4px;
+            border-radius: 4px;
+            background-color: white;
+            transform-origin: right;
+            float: right;
+        }
+        .btn__arrow {
+            width: 20px;
+            position: relative;
+        }
+        .btn__arrow::before {
+            position: absolute;
+            width: 15px;
+            left: 5px;
+            top: 1px;
+            transform: rotate(45deg);
+        }
+        .btn__arrow::after {
+            position: absolute;
+            width: 15px;
+            left: 5px;
+            top: -1px;
+            transform: rotate(-45deg);
+        }
+    }
+    .login__not {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p.not__text {
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: $styleDark;
+        }
+        a.btn__not {
+            text-decoration: none;
+            display: block;
+            width: 99px;
+            height: 44px;
+            font-family: $shrift;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 44px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $stylePur;
+            border: 1px solid $stylePur;
+            border-radius: 22px;
+        }
+    }
+}
+.login__box_active {
+    transform: scale(1);
+    visibility: visible;
+    transition: 0.5s;
 }

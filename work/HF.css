@@ -86,6 +86,7 @@ header .login .login__in {
   border-color: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
   margin: 0px 10px;
+  cursor: pointer;
 }
 header .login .login__log {
   display: flex;
@@ -93,6 +94,7 @@ header .login .login__log {
   border-radius: 22px;
   color: white;
   margin: 0px 10px;
+  cursor: pointer;
 }
 
 footer {
@@ -102,6 +104,7 @@ footer {
   box-shadow: 0 0 1px;
   z-index: 10;
   background: white;
+  width: 100%;
 }
 footer .up-footer {
   box-sizing: border-box;
