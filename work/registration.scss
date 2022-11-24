@@ -4,7 +4,21 @@ $styleGr: #6fcf97;
 $grad: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
 $shrift: "Montserrat", sans-serif;
 
+.back {
+    pointer-events: none;
+    position: absolute;
+    z-index: 11;
+    margin-top: 73px;
+    margin-left: -140px;
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .registration {
+    pointer-events: all;
+    border-radius: 4px;
     width: 380px;
     display: flex;
     flex-direction: column;
@@ -18,6 +32,7 @@ $shrift: "Montserrat", sans-serif;
     transform: scale(0);
     visibility: hidden;
     transition: 0.5s;
+    transform-origin: top, right;
     h1 {
         font-family: $shrift;
         font-style: normal;
@@ -37,6 +52,7 @@ $shrift: "Montserrat", sans-serif;
         color: $styleDark;
     }
     input {
+        box-sizing: border-box;
         width: 100%;
         height: 44px;
         padding: 13px 15px;
@@ -185,6 +201,7 @@ $shrift: "Montserrat", sans-serif;
         justify-content: flex-end;
         align-items: center;
         padding: 15px 20px;
+        cursor: pointer;
         a.btn__text {
             text-decoration: none;
             color: white;
@@ -256,6 +273,7 @@ $shrift: "Montserrat", sans-serif;
             color: $stylePur;
             border: 1px solid $stylePur;
             border-radius: 22px;
+            cursor: pointer;
         }
     }
 }
@@ -263,10 +281,11 @@ $shrift: "Montserrat", sans-serif;
     transform: scale(1);
     visibility: visible;
     transition: 0.5s;
+    transform-origin: top, right;
 }
 
 .login__box {
-    position: absolute;
+    pointer-events: all;
     width: 380px;
     display: flex;
     flex-direction: column;
@@ -277,9 +296,11 @@ $shrift: "Montserrat", sans-serif;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     gap: 20px;
+    border-radius: 4px;
     transform: scale(0);
     visibility: hidden;
     transition: 0.5s;
+    transform-origin: top, right;
     h1 {
         font-family: $shrift;
         font-style: normal;
@@ -289,6 +310,7 @@ $shrift: "Montserrat", sans-serif;
         color: $styleDark;
     }
     input {
+        box-sizing: border-box;
         width: 100%;
         height: 44px;
         padding: 13px 15px;
@@ -312,7 +334,6 @@ $shrift: "Montserrat", sans-serif;
         flex-direction: column;
         gap: 10px;
         width: 100%;
-        
     }
     .login__btn {
         box-sizing: border-box;
@@ -324,6 +345,7 @@ $shrift: "Montserrat", sans-serif;
         justify-content: flex-end;
         align-items: center;
         padding: 15px 20px;
+        cursor: pointer;
         a.btn__text {
             text-decoration: none;
             color: white;
@@ -372,13 +394,13 @@ $shrift: "Montserrat", sans-serif;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
         p.not__text {
             font-family: $shrift;
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
             line-height: 18px;
-            color: $styleDark;
         }
         a.btn__not {
             text-decoration: none;
@@ -395,6 +417,7 @@ $shrift: "Montserrat", sans-serif;
             color: $stylePur;
             border: 1px solid $stylePur;
             border-radius: 22px;
+            cursor: pointer;
         }
     }
 }
@@ -402,4 +425,5 @@ $shrift: "Montserrat", sans-serif;
     transform: scale(1);
     visibility: visible;
     transition: 0.5s;
+    transform-origin: top, right;
 }

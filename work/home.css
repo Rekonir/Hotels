@@ -8,11 +8,10 @@ body .fon {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-end;
-  background-image: url(../file/Fon.png);
+  background-image: url(../file/Fon1.png);
   background-size: cover;
   padding: 0px 140px;
   width: 100%;
-  height: 1em;
 }
 body .fon .fon__text {
   display: flex;
@@ -26,17 +25,6 @@ body .fon .fon__text {
 }
 body .fon .reg-box {
   display: flex;
-}
-body .fon__reg {
-  position: relative;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../file/fon-reg.png);
-  background-size: cover;
-  padding: 20px 140px;
-  width: 100%;
 }
 
 /*# sourceMappingURL=home.css.map */

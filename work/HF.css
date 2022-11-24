@@ -45,6 +45,7 @@ header .navig .navig__col {
   letter-spacing: 0em;
   align-items: baseline;
   margin: auto 10px;
+  cursor: pointer;
 }
 header .navig__arrow {
   box-sizing: border-box;
@@ -102,7 +103,6 @@ footer {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   box-shadow: 0 0 1px;
-  z-index: 10;
   background: white;
   width: 100%;
 }
@@ -267,4 +267,4 @@ footer .end-footer .social .social__logo .social__icon {
   height: 24px;
 }
 
-/*# sourceMappingURL=HF.css.map */
+/*# sourceMappingURL=hf.css.map */

@@ -49,6 +49,7 @@ header {
             letter-spacing: 0em;
             align-items: baseline;
             margin: auto 10px;
+            cursor: pointer;
         }
     }
     .navig__arrow {
@@ -108,7 +109,6 @@ footer {
     box-sizing: border-box;
     font-family: $shrift;
     box-shadow: 0 0 1px;
-    z-index: 10;
     background: white;
     width: 100%;
     .up-footer {
@@ -177,7 +177,7 @@ footer {
                 margin: 0px;
                 padding: 0px;
                 li {
-                    a{
+                    a {
                         text-decoration: none;
                     }
                     padding: 10px 0px;

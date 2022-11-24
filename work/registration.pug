@@ -1,27 +1,41 @@
 link(rel="stylesheet", href="registration.css")
 body
-  .registration
-    h1.registration__header Регистарция аккаунта
-    .registration__FIO
-      input.1name(type="text", placeholder="Имя", title="Укажите свое имя")
-      input.2name(type="text", placeholder="Фамилия", title="Укажите свою фамилию")
-      .gender
-        input.gender__choose#boy(type="radio", name="gender", value="value")         
-        label.gender__choose(for="boy") Мужчина
-        input.gender__choose#girl(type="radio", name="gender", value="value")
-        label.gender__choose(for="girl") Женщина
-    .registration__bday
-      h2.bday__subheader День рождения
-      input.bday__date(type="date", placeholder="ДД.ММ.ГГГГ", title="Укажите свою дату рождения")
-    .registration__login
-      h2.lodin__subheader данные для входа в сервис
-      input.reg__email(type="email", placeholder="Email", title="Укажите свою электронную почту")
-      input.reg__password(type="password", placeholder="Пароль", title="Укажите свой пароль")
-      input.reg__spam#spam(type="checkbox", name="spam")
-      label.spam(for="spam") Получать спецпредложения
-    .registration__btn
-      a.btn__text(href="error.html") Зарегистрироваться
-      .btn__arrow
-    .registration__already
-      p.already__text Уже есть аккаунт на TOXIC?
-      a.btn__already(href="login-box.html") Войти
+  .back
+    .registration
+      h1.registration__header Регистарция аккаунта
+      .registration__FIO
+        input.1name(type="text", placeholder="Имя", title="Укажите свое имя")
+        input.2name(type="text", placeholder="Фамилия", title="Укажите свою фамилию")
+        .gender
+          input.gender__choose#boy(type="radio", name="gender", value="value")         
+          label.gender__choose(for="boy") Мужчина
+          input.gender__choose#girl(type="radio", name="gender", value="value")
+          label.gender__choose(for="girl") Женщина
+      .registration__bday
+        h2.bday__subheader День рождения
+        input.bday__date(type="date", placeholder="ДД.ММ.ГГГГ", title="Укажите свою дату рождения")
+      .registration__login
+        h2.lodin__subheader данные для входа в сервис
+        input.reg__email(type="email", placeholder="Email", title="Укажите свою электронную почту")
+        input.reg__password(type="password", placeholder="Пароль", title="Укажите свой пароль")
+        input.reg__spam#spam(type="checkbox", name="spam")
+        label.spam(for="spam") Получать спецпредложения
+      .registration__btn
+        a.btn__text Зарегистрироваться
+        .btn__arrow
+      .registration__already
+        p.already__text Уже есть аккаунт на TOXIC?
+        a.btn__already Войти
+  .back
+    .login__box
+      h1.login__subheader Войти
+      .login__login
+        input.login__email(type="email", placeholder="Email", title="Укажите свою электронную почту")
+        input.login__password(type="password", placeholder="Пароль", title="Укажите свой пароль")
+      .login__btn
+        a.btn__text Войти
+        .btn__arrow
+      .login__not
+        p.not__text Нет аккаунта на TOXIC?
+        a.btn__not Создать
+  

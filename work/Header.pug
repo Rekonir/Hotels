@@ -13,17 +13,16 @@ html(lang="ru")
           p.TOXIC TOXIC
       nav.navig
         a.navig__col(href="/work/error.html") О нас
-        a.navig__col(href="/work/error.html") Услуги 
+        a.navig__col.usl__btn Услуги 
         .navig__arrow
-          a.navig__arrow-site(href="/work/error.html")
         a.navig__col(href="/work/error.html") Вакансии
         a.navig__col(href="/work/error.html") Новости
-        a.navig__col(href="/work/error.html") Соглашение
+        a.navig__col.sogl__btn Соглашение
         .navig__arrow
-          a(href="/work/error.html")
       .login
         .login__in
           p.login__text Войти
         .login__log
           p.login__text Зарегистрироваться 
-      scrict(scr="/work/login.JS")
+  include registration.pug
+script(src="login.js")
