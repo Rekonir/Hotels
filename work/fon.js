@@ -1,13 +1,14 @@
-var fon = document.getElementsByClassName('fon')[0]
-console.dir(fon.style)
+var f = document.getElementsByClassName('fon')[0]
 
-let i=1
-fon.style.BackgroundImage = 'url(../file/Fon2.png)'
-
-// let timer = setInterval(() => {
-//     fon.style.BackgroundImage = `url(../file/Fon${i}.png)`
-//     i=i+1
-//     if (i>=2){
-//         i=1
-//     }
-// }, 1000)
+let i = 1
+let timerFon = setInterval(() => {
+    if (i == 1) {
+        f.style.backgroundImage = "url(../file/Fon2.png)"
+        i=i+1
+    }
+    else{
+        f.style.backgroundImage = "url(../file/Fon1.png)"
+        i=1
+    }
+    
+}, 5000)

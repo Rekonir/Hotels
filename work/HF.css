@@ -97,6 +97,61 @@ header .login .login__log {
   margin: 0px 10px;
   cursor: pointer;
 }
+header .usl__box {
+  position: relative;
+  width: 0;
+  height: 0;
+  transform: scale(0);
+  visibility: hidden;
+  transition: 0.25s;
+  overflow: hidden;
+}
+header .usl__box_active {
+  transform: scale(1);
+  visibility: visible;
+  transition: 0.25s;
+  overflow: visible;
+}
+header .sog__box {
+  position: relative;
+  width: 0;
+  height: 0;
+  transform: scale(0);
+  visibility: hidden;
+  transition: 0.25s;
+  overflow: hidden;
+}
+header .sog__box_active {
+  transform: scale(1);
+  visibility: visible;
+  transition: 0.25s;
+  overflow: visible;
+}
+header .add__box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  top: 60px;
+  right: -15px;
+  width: max-content;
+  padding: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(31, 32, 65, 0.75);
+  background: white;
+}
+header .add__box a.add__text {
+  display: block;
+  color: #1f2041;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 33px;
+}
 
 footer {
   position: relative;

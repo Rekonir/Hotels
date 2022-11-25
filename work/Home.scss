@@ -8,6 +8,7 @@ body {
     box-sizing: border-box;
     margin: 73px 0px 0px 0px;
     .fon {
+        position: relative;
         box-sizing: border-box;
         display: flex;
         flex-direction: row-reverse;
@@ -17,6 +18,8 @@ body {
         background-size: cover;
         padding: 0px 140px;
         width: 100%;
+        transition: 2.5s;
+        transform-origin: right;
         .fon__text {
             display: flex;
             font-family: $shrift;
@@ -27,19 +30,8 @@ body {
             text-align: right;
             color: rgba($styleDark, 0.75);
         }
-        .reg-box{
+        .reg-box {
             display: flex;
         }
     }
-    // .fon__reg{
-    //     position: relative;
-    //     box-sizing: border-box;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     background-image: url(../file/fon-reg.png);
-    //     background-size: cover;
-    //     padding: 20px 140px;
-    //     width: 100%;
-    // }
 }

@@ -185,13 +185,15 @@ body {
   box-sizing: border-box;
   width: 270px;
   height: 275px;
-  display: inline-block;
+  display: block;
+  text-decoration: none;
   background: white;
   padding: 0px;
   margin: 20px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
   border-radius: 4px;
   transition: 0.25s;
+  cursor: pointer;
 }
 .nomera .nomera__table .nomera__hotel .nomera__oblozhka {
   box-sizing: border-box;

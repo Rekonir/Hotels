@@ -3,6 +3,7 @@ body {
   margin: 73px 0px 0px 0px;
 }
 body .fon {
+  position: relative;
   box-sizing: border-box;
   display: flex;
   flex-direction: row-reverse;
@@ -12,6 +13,8 @@ body .fon {
   background-size: cover;
   padding: 0px 140px;
   width: 100%;
+  transition: 2.5s;
+  transform-origin: right;
 }
 body .fon .fon__text {
   display: flex;

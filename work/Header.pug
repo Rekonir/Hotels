@@ -1,28 +1,31 @@
 doctype html 
 html(lang="ru")
-  head 
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-    title header 
-    link(rel="stylesheet", href="HF.css")
-  body
-    header
-      a.logo(href="/work/Home.html" target="_blank")
-        img.logopic(src="/file/logo.png", alt="Лого не загрузилось")
-        .TOXIN
-          p.TOXIC TOXIC
-      nav.navig
-        a.navig__col(href="/work/error.html") О нас
-        a.navig__col.usl__btn Услуги 
-        .navig__arrow
-        a.navig__col(href="/work/error.html") Вакансии
-        a.navig__col(href="/work/error.html") Новости
-        a.navig__col.sogl__btn Соглашение
-        .navig__arrow
-      .login
-        .login__in
-          p.login__text Войти
-        .login__log
-          p.login__text Зарегистрироваться 
+  link(rel="stylesheet", href="HF.css")
+header
+  a.logo(href="/work/Home.html" target="_blank")
+    img.logopic(src="/file/logo.png", alt="Лого не загрузилось")
+    .TOXIN
+      p.TOXIC TOXIC
+  nav.navig
+    a.navig__col(href="/work/error.html") О нас
+    a.navig__col.usl__btn Услуги
+      .usl__box
+        .add__box 
+          a.add__text(href="/work/error.html") Услуга 1
+          a.add__text(href="/work/error.html") Услуга 2
+    .navig__arrow
+    a.navig__col(href="/work/error.html") Вакансии
+    a.navig__col(href="/work/error.html") Новости
+    a.navig__col.sog__btn Соглашение
+      .sog__box
+        .add__box
+          a.add__text(href="/work/error.html") Соглашение 1
+          a.add__text(href="/work/error.html") Соглашение 2
+    .navig__arrow
+  .login
+    .login__in
+      p.login__text Войти
+    .login__log
+      p.login__text Зарегистрироваться 
   include registration.pug
-script(src="login.js")
+  script(src="login.js")

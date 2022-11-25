@@ -102,6 +102,61 @@ header {
             cursor: pointer;
         }
     }
+    .usl__box {
+        position: relative;
+        width: 0;
+        height: 0;
+        transform: scale(0);
+        visibility: hidden;
+        transition: 0.25s;
+        overflow: hidden;
+    }
+    .usl__box_active {
+        transform: scale(1);
+        visibility: visible;
+        transition: 0.25s;
+        overflow: visible;
+    }
+    .sog__box {
+        position: relative;
+        width: 0;
+        height: 0;
+        transform: scale(0);
+        visibility: hidden;
+        transition: 0.25s;
+        overflow: hidden;
+    }
+    .sog__box_active {
+        transform: scale(1);
+        visibility: visible;
+        transition: 0.25s;
+        overflow: visible;
+    }
+    .add__box {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top: 60px;
+        right: -15px;
+        width: max-content;
+        padding: 15px;
+        border: 1px solid rgba($styleDark, 0.5);
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba($styleDark, 0.75);
+        background: white;
+        a.add__text {
+            display: block;
+            color: $styleDark;
+            text-decoration: none;
+            font-family: $shrift;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 33px;
+        }
+    }
 }
 
 footer {

@@ -32,15 +32,14 @@ regBtn2.onclick = event => {
     }
 }
 
-var usl = document.getElementsByClassName('uslugi')[0]
-//var sog = documet.getElementsByClassName('sogl')[0]
-var uslBtn = document.getElementsByClassName('usl__btn')[0]
-var sogBtn = document.getElementsByClassName('sogl__btn')[0]
+var uslBTN = document.getElementsByClassName('usl__btn')[0]
+var sogBTN = document.getElementsByClassName('sog__btn')[0]
+var uslBOX =document.getElementsByClassName('usl__box')[0]
+var sogBOX = document.getElementsByClassName('sog__box')[0]
 
-uslBtn.onclick=event=>{
-    usl.classList.toggle('uslugi_active')
-    console.dir(usl)
+uslBTN.onclick = event=> {
+    uslBOX.classList.toggle('usl__box_active')
 }
-// sogBtn.onclick=event=>{
-//     sog.classList.toggle('sogl_active')
-// }
+sogBTN.onclick = event=> {
+    sogBOX.classList.toggle('sog__box_active')
+}
