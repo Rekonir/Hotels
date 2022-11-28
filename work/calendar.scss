@@ -1,0 +1,29 @@
+$styleDark: #1f2041;
+$stylePur: #bc9cff;
+$styleGr: #6fcf97;
+$grad: linear-gradient(to bottom, #bc9cff 0%, #8ba4f9 100%);
+$shrift: "Montserrat", sans-serif;
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+input.calendar[type="text"] {
+    width: 150px;
+    height: 44px;
+    padding: 0 10px;
+    font-family: $shrift;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: rgba($styleDark, 0.75);
+    border: 1px solid rgba($styleGr, 0.25);
+    border-radius: 4px;
+    cursor: pointer;
+}
