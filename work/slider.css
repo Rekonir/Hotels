@@ -1,0 +1,55 @@
+@charset "UTF-8";
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input.cost-slider__input[type=number] {
+  border: none;
+  width: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  text-align: right;
+}
+
+.cost-slider__input {
+  width: 53px;
+}
+
+.cost-slider__input::after {
+  content: "₽";
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.cost-slider__p {
+  text-align: center;
+  width: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.cost-slider__text {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+.cost-slider__text .cost-slider__range {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=slider.css.map */

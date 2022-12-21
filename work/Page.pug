@@ -6,6 +6,9 @@ html(lang="ru")
     title Hotels
     link(rel="icon", href="../file/icon.png", type="image/x-icon")
     link(rel="stylesheet", href="Page.css")
+    link(rel="stylesheet", href="/work/slider.css")
+    link(rel="stylesheet", href="/slider/nouislider.min.css")
+
   body
     header
       include Header.pug
@@ -21,9 +24,17 @@ html(lang="ru")
             h2.menu-list__header Гости
             input(type="text")
           .menu-list__row
-            h2.menu-list__header Диапозон цены
-            p.menu-list__cost 5 500 - 6 000
-            input(type="text")
+            .cost-slider
+              .cost-slider__text
+                h2.menu-list__header Диапозон цены
+                .cost-slider__range
+                  .cost-slider__input
+                    input.cost-slider__input#slider0(type="number" placeholder="0")
+                  .cost-slider__p -
+                  .cost-slider__input
+                    input.cost-slider__input#slider1(type="number" placeholder="15 000")
+              .cost-slider__slider
+              p Стоимость за сутки пребывания в номере
           .menu-list__row
             h2.menu-list__header Правила дома
             input.menu-list__pravila#smoke(type="checkbox", name="pravila") 
@@ -303,7 +314,7 @@ html(lang="ru")
                 p.otziv__text Отзывов:
                 p.otziv__value 12
           a.nomera__hotel(href="./error.html", target="blank")
-            img.nomera__oblozhka(src="https://t-cf.bstatic.com/xdata/images/hotel/square200/313275256.webp?k=9e799b660a2d42155ac08c034533fda383e195437d3588723e23f2ff52c08c9d&o=", alt="Обложки нет")
+            img.nomera__oblozhka(src="https://avatars.mds.yandex.net/get-altay/4454943/2a00000181ce66ebc0905f6bc209431169a7/XXXL", alt="Обложки нет")
             .nomera__info
               p.nomera__name № 352
               p.nomera__type 
@@ -336,5 +347,7 @@ html(lang="ru")
         a.page__number-arrow(href="error.html")
           .page__number-arrow-right
     script(src="side-menu.js")
+    script(src="/slider/nouislider.min.js")
+    script(src="/work/slider.js")
     footer
       include Footer.pug
