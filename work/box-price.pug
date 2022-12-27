@@ -12,12 +12,8 @@ html(lang="ru")
         p.box__cost 8 500₽
         p.box__per-day в сутки
       .box__date
-        .box__prib
-          h2.box__subheader Прибытие
-          input.date(type="date")
-        .box__viezd
-          h2.box__subheader Выезд
-          input.date(type="date")
+        h2.box__subheader Даты пребывания
+        include calendar.pug
       .box__gosty
         h2.box__gosty-text Гости
         .gosty Гости

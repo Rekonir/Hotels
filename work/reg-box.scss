@@ -24,14 +24,6 @@ h1 {
     letter-spacing: 0em;
     text-align: left;
 }
-.reg__date {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    .reg__prib {
-        margin-right: 20px;
-    }
-}
 .reg__text {
     font-family: $shrift;
     font-weight: 700;
@@ -149,4 +141,16 @@ input.gosty[type="text"] {
         margin: 0px 16px;
         padding: 0px;
     }
+}
+.gosty__close{
+    border-radius: 50%;
+    background: $grad;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    color: white;         
+    line-height: 18px;
+    margin-left: 100%;
+    margin-top: -18px;
+    cursor: pointer;
 }

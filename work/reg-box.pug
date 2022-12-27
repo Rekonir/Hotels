@@ -6,15 +6,13 @@ link(rel="stylesheet", href="reg-box.css")
     h1 Найдём номера под <br> ваши пожелания
   .reg__date
     .reg__prib
-      h2.reg__text Прибытие
-      input.reg__date-input(type="date", placeholder="ДД.ММ.ГГГГ", title="Выбирете желаемую дату прибытия")
-    .vyezd
-      h2.reg__text Выезд
-      input.reg__date-input(type="date", placeholder="ДД.ММ.ГГГГ", title="Выбирете желаемую дату выезда")
+      h2.reg__text Даты пребывания
+      include calendar.pug
   .reg__col
     h2.reg__text Гости
     input.gosty(type="text", placeholder="Гости", title="Сколько планируется гостей?")
     .gosty__drop
+      .gosty__close X
       .gosty__drop-schet 
         h2.reg__text Взрослые от 18 лет
         .schet

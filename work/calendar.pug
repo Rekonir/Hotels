@@ -1,12 +1,9 @@
 doctype html 
 html(lang="ru")
-  head 
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-    link(rel="stylesheet", href="calendar.css")
-    link(rel="stylesheet", href="../datepicker/css/datepicker.css")
-  body
-    input.calendar#calendar(type="text", placeholder="ДД.ММ.ГГГГ", title="Выбирете желаемую дату выезда")
+  link(rel="stylesheet", href="calendar.css")
+  link(rel="stylesheet", href="../datepicker/css/datepicker.css")
+  .calendar__body
+    input.calendar#calendar(type="text", placeholder="ДД.ММ.ГГГГ", title="Выбирете желаемые даты")
   script(src='jQ.js')
   script(src='../datepicker/js/datepicker.js')
   script(src='/work/calendar.js')

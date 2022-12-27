@@ -18,11 +18,31 @@ html(lang="ru")
           .menu-btn__animation 
         .menu-list
           .menu-list__row
-            h2.menu-list__header Даты прибывания в отеле
-            input(type="text")
+            h2.menu-list__header Даты пребывания
+            include calendar.pug
           .menu-list__row
             h2.menu-list__header Гости
-            input(type="text")
+            input.gosty(type="text", placeholder="Гости", title="Сколько планируется гостей?")
+            .gosty__drop
+              .gosty__close X
+              .gosty__drop-schet 
+                .reg__text Взрослые от 18 лет
+                .schet
+                  img.minus#mvzr(src="/file/minus.png" alt='Нет минуса')
+                  .itog#vzr 0
+                  img.plus#pvzr(src="/file/plus.png" alt='Нет плюса')
+              .gosty__drop-schet
+                .reg__text Дети до 17 лет
+                .schet
+                  img.minus#mdety(src="/file/minus.png" alt='Нет минуса')
+                  .itog#dety 0
+                  img.plus#pdety(src="/file/plus.png" alt='Нет плюса')
+              .gosty__drop-schet
+                .reg__text Младенцы до 1 года
+                .schet
+                  img.minus#mbaby(src="/file/minus.png" alt='Нет минуса')
+                  .itog#baby 0
+                  img.plus#pbaby(src="/file/plus.png" alt='Нет плюса')
           .menu-list__row
             .cost-slider
               .cost-slider__text
@@ -34,7 +54,7 @@ html(lang="ru")
                   .cost-slider__input
                     input.cost-slider__input#slider1(type="number" placeholder="15 000")
               .cost-slider__slider
-              p Стоимость за сутки пребывания в номере
+              p Стоимость за сутки 
           .menu-list__row
             h2.menu-list__header Правила дома
             input.menu-list__pravila#smoke(type="checkbox", name="pravila") 
@@ -42,18 +62,38 @@ html(lang="ru")
             input.menu-list__pravila#pet(type="checkbox", name="pravila") 
             label.menu-list__pravila-label(for="pet") Можно с питомцами
             input.menu-list__pravila#visiter(type="checkbox", name="pravila") 
-            label.menu-list__pravila-label(for="visiter") Можно пригласить гостей (до 10 человек)
+            label.menu-list__pravila-label(for="visiter") Можно с гостями
           .menu-list__row
             h2.menu-list__header Доступность
             input.menu-list__dostyp#hallway(type="checkbox", name="dostyp") 
             label.menu-list__dostyp-label(for="hallway") Широкий коридор
               p Ширина коридоров в номере <br>не менее 91 см.
             input.menu-list__dostyp#helper(type="checkbox", name="dostyp") 
-            label.menu-list__dostyp-label(for="helper")  Помощник для инвалидов
+            label.menu-list__dostyp-label(for="helper")  Помощник
               p На 1 этаже вас встретит специалист <br>и проводит до номера.
           .menu-list__row
             h2.menu-list__header Удобства номера
-            input(type="text")
+            input.udob(type="text", placeholder="Удобства", title="Какие необходимы удобства?")
+            .udob__drop
+              .udob__close X
+              .udob__drop-schet 
+                .reg__text Спальни
+                .schet
+                  img.minus#msp(src="/file/minus.png" alt='Нет минуса')
+                  .itog#sp 0
+                  img.plus#psp(src="/file/plus.png" alt='Нет плюса')
+              .udob__drop-schet 
+                .reg__text Кровати
+                .schet
+                  img.minus#mbed(src="/file/minus.png" alt='Нет минуса')
+                  .itog#bed 0
+                  img.plus#pbed(src="/file/plus.png" alt='Нет плюса').udob__drop-schet 
+              .udob__drop-schet
+                .reg__text Ванные
+                .schet
+                  img.minus#mbath(src="/file/minus.png" alt='Нет минуса')
+                  .itog#bath 0
+                  img.plus#pbath(src="/file/plus.png" alt='Нет плюса')
           .menu-list__row
             h2.menu-list__header Дополнительные удобства
             input.menu-list__dop#breakfast(type="checkbox", name="dop") 
@@ -62,8 +102,8 @@ html(lang="ru")
             label.menu-list__dop-label(for="table") Письманный стол
             input.menu-list__dop#chair(type="checkbox", name="dop") 
             label.menu-list__dop-label(for="chair") Стул для кормления
-            input.menu-list__dop#bed(type="checkbox", name="dop") 
-            label.menu-list__dop-label(for="bed") Кроватка
+            input.menu-list__dop#lbed(type="checkbox", name="dop") 
+            label.menu-list__dop-label(for="lbed") Кроватка
             input.menu-list__dop#TV(type="checkbox", name="dop") 
             label.menu-list__dop-label(for="TV") Телевизор
             input.menu-list__dop#shampoo(type="checkbox", name="dop")
@@ -72,7 +112,17 @@ html(lang="ru")
         h1.nomera__header Номера, которые мы для вас подобрали
         .nomera__table
           a.nomera__hotel(href="./room.html", target="blank")
-            img.nomera__oblozhka(src="https://cdn1.ozone.ru/s3/hotels-widget-api/1848484048000/2349664834000/wc1000/12248086_1659905764285865_391157404186974832_o.jpg", alt="Обложки нет")
+            .oblozhka__slider
+              .oblozhka__slider1
+                img.oblozhka1(src="https://cdn1.ozone.ru/s3/hotels-widget-api/1848484048000/2349664834000/wc1000/12248086_1659905764285865_391157404186974832_o.jpg", alt="Обложки нет")
+              .oblozhka__slider2
+                img.oblozhka2(src="http://m.jsptravel.ru/suite_bedroom_office_7666.jpg", alt="Обложки нет")
+              .oblozhka__slider3
+                img.oblozhka3(src="https://cdn1.ozone.ru/s3/hotels-widget-api/1848484048000/2349664834000/wc1000/c528c124d6363d1d62e0dbfa99c3e072.jpg", alt="Обложки нет")
+              .oblozhka__pointer
+                .oblozhka__pointer1
+                .oblozhka__pointer2
+                .oblozhka__pointer3
             .nomera__info
               p.nomera__name № 980
               p.nomera__type люкс
@@ -349,5 +399,6 @@ html(lang="ru")
     script(src="side-menu.js")
     script(src="/slider/nouislider.min.js")
     script(src="/work/slider.js")
+    script(src="drop.js")
     footer
       include Footer.pug

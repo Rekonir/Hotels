@@ -50,27 +50,9 @@
 
 .box__date {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: baseline;
   justify-content: space-between;
-}
-.box__date input.date[type=date] {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-  width: 150px;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  padding: 0px 15px;
-}
-.box__date input.date[type=date]::-webkit-calendar-picker-indicator {
-  background-image: url(/file/calendar.png);
-  width: 20px;
-  height: 20px;
-  margin: 0px;
 }
 
 .box__gosty {

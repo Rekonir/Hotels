@@ -1,10 +1,16 @@
 var drop = document.getElementsByClassName('gosty__drop')[0]
 var inp = document.getElementsByClassName('gosty')[0]
+var cl = document.getElementsByClassName('gosty__close')[0]
 inp.onclick = (event) => {
     if (drop.style.display === "none") {
         drop.style.display = "flex"
     }
     else {
+        drop.style.display = "none"
+    }
+}
+cl.onclick = (event) => {
+    if (drop.style.display = "flex") {
         drop.style.display = "none"
     }
 }
@@ -60,16 +66,91 @@ pbaby.onclick = (event) => {
     document.getElementById('baby').textContent = baby
 }
 
-var gosty = document.getElementsByClassName('gosty')[0]
 const dropG = document.querySelector('.gosty__drop')
 
 dropG.onclick = (event) => {
-    if (vzr || dety > 0, baby==0) {
-        gosty.placeholder = `Количество спальных мест: ${vzr+dety}`
+    if (vzr || dety > 0, baby == 0) {
+        inp.placeholder = `Мест: ${vzr + dety}`
     }
-    else if (vzr || dety > 0, baby>0) {
-        gosty.placeholder = `Количество спальных мест: ${vzr+dety} и люлек: ${baby}`
+    else if (vzr || dety > 0, baby > 0) {
+        inp.placeholder = `Мест: ${vzr + dety} и младенцев: ${baby}`
     }
+}
 
+// Удобства в Page.html//
 
+var dropU = document.getElementsByClassName('udob__drop')[0]
+var inpU = document.getElementsByClassName('udob')[0]
+var clU = document.getElementsByClassName('udob__close')[0]
+
+inpU.onclick = (event) => {
+    if (dropU.style.display === "none") {
+        dropU.style.display = "flex"
+    }
+    else {
+        dropU.style.display = "none"
+    }
+}
+
+clU.onclick = (event) => {
+    if (dropU.style.display = "flex") {
+        dropU.style.display = "none"
+    }
+}
+
+const msp = document.getElementById('msp')
+var sp = Number(document.getElementById('sp').textContent)
+const psp = document.getElementById('psp')
+msp.onclick = (event) => {
+    if (sp > 0) {
+        sp = sp - 1
+        document.getElementById('sp').textContent = sp
+    }
+    else {
+        document.getElementById('sp').textContent = 0
+    }
+}
+psp.onclick = (event) => {
+    sp = sp + 1
+    document.getElementById('sp').textContent = sp
+}
+
+const mbed = document.getElementById('mbed')
+var bed = Number(document.getElementById('bed').textContent)
+const pbed = document.getElementById('pbed')
+mbed.onclick = (event) => {
+    if (bed > 0) {
+        bed = bed - 1
+        document.getElementById('bed').textContent = bed
+    }
+    else {
+        document.getElementById('bed').textContent = 0
+    }
+}
+pbed.onclick = (event) => {
+    bed = bed + 1
+    document.getElementById('bed').textContent = bed
+}
+
+const mbath = document.getElementById('mbath')
+var bath = Number(document.getElementById('bath').textContent)
+const pbath = document.getElementById('pbath')
+mbath.onclick = (event) => {
+    if (bath > 0) {
+        bath = bath - 1
+        document.getElementById('bath').textContent = bath
+    }
+    else {
+        document.getElementById('bath').textContent = 0
+    }
+}
+pbath.onclick = (event) => {
+    bath = bath + 1
+    document.getElementById('bath').textContent = bath
+}
+
+const Udob = document.querySelector('.udob__drop')
+
+Udob.onclick = (event) => {
+    inpU.placeholder = `Сп.: ${sp}, Кр.: ${bed}, Ван.: ${bath}`
 }
