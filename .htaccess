@@ -1,1 +1,2 @@
-DirectoryIndex Home.html
+RewriteEngine On
+RewriteRule ^$ ./work/Home.html [L]
